@@ -5,9 +5,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aratrika Debnath | Climate Mobility & Urban Policy</title>
+<title>Aratrika Debnath | Urban Policy, Migration & Climate Mobility</title>
+
+<meta
+    name="description"
+    content="Aratrika Debnath is an urban policy researcher working across climate mobility, migration, institutions, quantitative social research, livelihoods and cities."
+>
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
 
 <style>
+
+/* =========================================================
+   1. COLOR + FONT SYSTEM
+   Change these later if you want a different visual palette.
+   ========================================================= */
+
+:root {
+
+    --paper: #f4efe6;
+    --paper-light: #fbf8f1;
+
+    --ink: #18332f;
+    --ink-soft: #324c48;
+
+    --terracotta: #c9684b;
+    --ochre: #d6a442;
+    --sage: #91a99f;
+    --blue: #7e9fa7;
+    --rose: #d4a095;
+
+    --line: rgba(24, 51, 47, 0.16);
+
+    --serif: "DM Serif Display", Georgia, serif;
+    --sans: "Manrope", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   2. GLOBAL
+   ========================================================= */
 
 * {
     box-sizing: border-box;
@@ -20,329 +63,1238 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #20272a;
+    font-family: var(--sans);
+    color: var(--ink);
+    line-height: 1.65;
+
     background:
-        radial-gradient(circle at 10% 20%, rgba(209,117,83,.10), transparent 28%),
-        radial-gradient(circle at 90% 10%, rgba(42,110,107,.10), transparent 30%),
-        #f5f1e8;
-    line-height: 1.6;
+        radial-gradient(circle at 12% 16%, rgba(201,104,75,.10), transparent 25%),
+        radial-gradient(circle at 88% 12%, rgba(126,159,167,.13), transparent 30%),
+        repeating-linear-gradient(
+            90deg,
+            rgba(24,51,47,.016) 0,
+            rgba(24,51,47,.016) 1px,
+            transparent 1px,
+            transparent 70px
+        ),
+        var(--paper);
 }
 
-/* NAVIGATION */
-
-nav {
-    width: 100%;
-    padding: 22px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(30,40,40,.12);
-    background: rgba(245,241,232,.92);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+img {
+    max-width: 100%;
 }
 
-.logo {
-    font-family: Georgia, serif;
-    font-size: 22px;
-    font-weight: bold;
+a {
+    color: inherit;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 28px;
+.container {
+    width: min(1180px, 84%);
+    margin: 0 auto;
 }
-
-nav a {
-    color: #263334;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #b45f43;
-}
-
-/* HERO */
-
-.hero {
-    min-height: 82vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 70px;
-    padding: 80px 8%;
-}
-
-.hero-content {
-    flex: 1 1 56%;
-    max-width: 760px;
-}
-
-.hero-portrait {
-    flex: 1 1 38%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.portrait-frame {
-    position: relative;
-    width: min(410px, 100%);
-}
-
-.portrait-frame::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #b45f43;
-    top: 18px;
-    left: 18px;
-    z-index: 0;
-}
-
-.portrait-frame img {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 540px;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-}
-
-.portrait-caption {
-    position: relative;
-    z-index: 2;
-    margin-top: 18px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #7b6d65;
-}
-
-.eyebrow {
-    color: #b45f43;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(55px, 8vw, 105px);
-    line-height: .95;
-    font-weight: normal;
-    color: #203033;
-    margin-bottom: 30px;
-}
-
-.hero-text {
-    font-family: Georgia, serif;
-    font-size: clamp(22px, 3vw, 34px);
-    max-width: 800px;
-    color: #516062;
-    line-height: 1.35;
-}
-
-.hero-tags {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tag {
-    border: 1px solid #7d8f89;
-    border-radius: 30px;
-    padding: 8px 16px;
-    font-size: 13px;
-    background: rgba(255,255,255,.35);
-}
-
-/* SECTIONS */
 
 section {
-    padding: 100px 8%;
+    padding: 110px 0;
 }
 
 .section-label {
-    color: #b45f43;
-    font-size: 12px;
-    font-weight: bold;
+    color: var(--terracotta);
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 18px;
 }
 
-h2 {
-    font-family: Georgia, serif;
-    font-size: clamp(38px, 5vw, 58px);
-    font-weight: normal;
-    margin-bottom: 35px;
-    color: #203033;
+.section-intro {
+    max-width: 760px;
+    color: #53635f;
+    font-size: 17px;
+    margin-bottom: 50px;
 }
 
-/* ABOUT */
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+}
+
+h2 {
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+h3 {
+    line-height: 1.15;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    border: 1px solid var(--ink);
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: .2s ease;
+}
+
+.button:hover {
+    background: var(--ink);
+    color: var(--paper-light);
+}
+
+.button.light {
+    border-color: rgba(255,255,255,.65);
+    color: white;
+}
+
+.button.light:hover {
+    background: white;
+    color: var(--ink);
+}
+
+
+/* =========================================================
+   3. NAVIGATION
+   ========================================================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    background: rgba(244,239,230,.94);
+
+    border-bottom: 1px solid var(--line);
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: var(--serif);
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   4. HERO
+   ========================================================= */
+
+.hero {
+    min-height: 88vh;
+
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 90px;
+    align-items: center;
+
+    padding: 80px 8% 95px;
+}
+
+.eyebrow {
+    color: var(--terracotta);
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(64px, 8vw, 112px);
+    line-height: .88;
+
+    color: var(--ink);
+
+    margin-bottom: 35px;
+}
+
+.hero-text {
+    font-family: var(--serif);
+    font-size: clamp(23px, 2.8vw, 34px);
+    line-height: 1.35;
+
+    max-width: 850px;
+
+    color: #465d58;
+}
+
+.hero-subtext {
+    max-width: 720px;
+
+    margin-top: 25px;
+
+    font-size: 15px;
+    color: #6a7774;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin-top: 35px;
+}
+
+.tag {
+    padding: 8px 14px;
+
+    border: 1px solid #84958f;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.35);
+
+    font-size: 11px;
+}
+
+
+/* HERO PORTRAIT */
+
+.hero-portrait {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.portrait-frame {
+    width: min(410px, 100%);
+    position: relative;
+}
+
+.portrait-frame::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 18px;
+    left: 18px;
+
+    border: 1px solid var(--terracotta);
+}
+
+.portrait-frame img {
+    position: relative;
+
+    width: 100%;
+    height: 540px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    display: block;
+
+    z-index: 1;
+}
+
+.portrait-caption {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 18px;
+
+    color: #7a6f68;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   5. ABOUT
+   ========================================================= */
 
 .about {
-    background: #203033;
-    color: #f7f1e7;
+    background: var(--ink);
+    color: var(--paper-light);
 }
 
 .about h2 {
-    color: #f7f1e7;
+    color: white;
+}
+
+.about .section-label {
+    color: #e8906f;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.3fr .7fr;
-    gap: 80px;
+    grid-template-columns: 1.4fr .6fr;
+    gap: 85px;
+
+    align-items: start;
 }
 
-.about p {
-    font-family: Georgia, serif;
-    font-size: 21px;
-    line-height: 1.8;
-    color: #e8e4dc;
+.about-main {
+    font-family: var(--serif);
+
+    font-size: clamp(21px, 2vw, 27px);
+    line-height: 1.6;
+
+    color: #f0ebe1;
 }
 
-.about-note {
-    border-left: 2px solid #d79a65;
+.about-side {
+    border-left: 2px solid var(--ochre);
     padding-left: 28px;
-    font-size: 15px;
-    color: #cbd3d0;
 }
 
-/* RESEARCH */
+.about-side p {
+    color: #c7d0cd;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   6. RESEARCH SNAPSHOT
+   ========================================================= */
+
+.snapshot {
+    background: var(--paper-light);
+}
+
+.snapshot-grid {
+    margin-top: 55px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+}
+
+.stat {
+    padding: 35px 28px;
+
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.stat-number {
+    font-family: var(--serif);
+
+    font-size: 45px;
+    color: var(--terracotta);
+
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #66716e;
+}
+
+
+/* =========================================================
+   7. RESEARCH PROGRAMS
+   ========================================================= */
 
 .research-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 20px;
 }
 
-.card {
-    padding: 35px;
-    min-height: 280px;
-    border: 1px solid rgba(40,50,50,.16);
-    border-radius: 5px;
-    background: rgba(255,255,255,.40);
-    transition: .25s;
+.research-card {
+    min-height: 340px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255,255,255,.34);
+
+    transition: transform .25s ease, background .25s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,.75);
+.research-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,.72);
 }
 
-.card-number {
-    color: #b45f43;
-    font-family: Georgia, serif;
+.research-number {
+    font-family: var(--serif);
     font-size: 18px;
-    margin-bottom: 50px;
+
+    color: var(--terracotta);
+
+    margin-bottom: 45px;
 }
 
-.card h3 {
-    font-family: Georgia, serif;
+.research-card h3 {
+    font-size: 29px;
+    margin-bottom: 17px;
+}
+
+.research-card p {
+    color: #65726f;
+    font-size: 14px;
+}
+
+.research-category {
+    margin-top: auto;
+    padding-top: 26px;
+
+    color: #8b5e4d;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   8. DOCTORAL RESEARCH FEATURE
+   ========================================================= */
+
+.doctoral {
+    background: #d9e0d8;
+}
+
+.doctoral-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 85px;
+
+    align-items: center;
+}
+
+.big-quote {
+    font-family: var(--serif);
+    font-size: clamp(29px, 3vw, 44px);
+    line-height: 1.25;
+
+    color: var(--ink);
+}
+
+.concept-list {
+    display: grid;
+    gap: 12px;
+}
+
+.concept {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid rgba(24,51,47,.2);
+}
+
+.concept span:first-child {
+    font-family: var(--serif);
+    font-size: 21px;
+}
+
+.concept span:last-child {
+    color: #6b7774;
+    font-size: 11px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   9. ANTICIPATORY URBANISM
+   ========================================================= */
+
+.anticipatory {
+    background: var(--ochre);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+
+    gap: 80px;
+    align-items: end;
+}
+
+.feature-title {
+    font-family: var(--serif);
+
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: .98;
+
+    margin-bottom: 25px;
+}
+
+.feature-description {
+    max-width: 720px;
+
+    font-size: 17px;
+    color: #3e4a47;
+}
+
+.feature-meta {
+    margin-top: 32px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.meta-pill {
+    border: 1px solid rgba(24,51,47,.5);
+
+    padding: 7px 12px;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.feature-side {
+    border-left: 1px solid rgba(24,51,47,.35);
+    padding-left: 35px;
+}
+
+.feature-side strong {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.feature-side p {
+    color: #495451;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   10. QUANTITATIVE RESEARCH
+   ========================================================= */
+
+.quantitative {
+    background: var(--paper-light);
+}
+
+.quant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.quant-card {
+    border: 1px solid var(--line);
+
+    padding: 38px;
+
+    background: var(--paper);
+}
+
+.quant-card.accent {
+    background: var(--ink);
+    color: white;
+}
+
+.quant-kicker {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: var(--terracotta);
+
+    margin-bottom: 20px;
+}
+
+.quant-card.accent .quant-kicker {
+    color: #eaa07e;
+}
+
+.quant-card h3 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.quant-card p {
+    color: #5d6a67;
+    font-size: 14px;
+}
+
+.quant-card.accent p {
+    color: #c9d1ce;
+}
+
+.city-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin: 28px 0;
+}
+
+.city {
+    padding: 7px 12px;
+
+    border: 1px solid currentColor;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+}
+
+.metric-row {
+    margin-top: 32px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    border-top: 1px solid rgba(255,255,255,.22);
+}
+
+.metric {
+    padding: 22px 15px 0 0;
+}
+
+.metric strong {
+    display: block;
+
+    font-family: var(--serif);
     font-size: 27px;
-    font-weight: normal;
+}
+
+.metric span {
+    font-size: 10px;
+    color: #b7c3bf;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.method-chips {
+    margin-top: 28px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.method-chip {
+    background: rgba(126,159,167,.16);
+
+    padding: 7px 10px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   11. RC21 VIENNA FEATURE
+   ========================================================= */
+
+.rc21 {
+    background: var(--ink);
+    color: white;
+}
+
+.rc21 .section-label {
+    color: #e8906f;
+}
+
+.rc21 h2 {
+    color: white;
+}
+
+.rc21-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+
+    gap: 70px;
+    align-items: center;
+}
+
+.rc21-copy p {
+    color: #c8d2cf;
+
+    margin-bottom: 25px;
+
+    max-width: 550px;
+}
+
+
+/* PHOTO COLLAGE */
+
+.photo-collage {
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+    grid-template-rows: 230px 230px;
+
+    gap: 12px;
+}
+
+.photo-slot {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(135deg, #c86b4c, #d5a443);
+
+    min-height: 180px;
+}
+
+.photo-slot.large {
+    grid-row: span 2;
+}
+
+.photo-slot img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.photo-slot span {
+    display: none;
+}
+
+.photo-slot.missing span {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-family: var(--serif);
+    font-size: 25px;
+
+    color: white;
+}
+
+
+/* =========================================================
+   12. PUBLICATIONS
+   ========================================================= */
+
+.publications {
+    background: var(--paper);
+}
+
+.publication-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 18px;
+}
+
+.pub-card {
+    padding: 30px;
+
+    border-top: 1px solid var(--ink);
+
+    background: rgba(255,255,255,.35);
+}
+
+.pub-type {
+    color: var(--terracotta);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
     margin-bottom: 15px;
 }
 
-.card p {
-    color: #66706f;
-    font-size: 15px;
+.pub-card h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
 }
 
-/* FEATURED */
-
-.featured {
-    background: #d7a064;
+.pub-card p {
+    color: #65716e;
+    font-size: 13px;
 }
 
-.featured h2 {
-    max-width: 750px;
+.pub-links {
+    margin-top: 22px;
+
+    display: flex;
+    gap: 18px;
 }
 
-.feature-box {
-    margin-top: 50px;
-    padding: 45px;
-    background: #f5f1e8;
+.pub-links a {
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: var(--terracotta);
+}
+
+
+/* =========================================================
+   13. ESSAYS
+   ========================================================= */
+
+.essays {
+    background: #e7d3ca;
+}
+
+.essay-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 18px;
+}
+
+.essay-card {
+    min-height: 235px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,.5);
+
+    border: 1px solid rgba(24,51,47,.14);
+}
+
+.essay-card h3 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.essay-card p {
+    font-size: 13px;
+    color: #646d6a;
+}
+
+.essay-card a {
+    margin-top: auto;
+    padding-top: 22px;
+
+    text-decoration: none;
+
+    color: var(--terracotta);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   14. TEACHING
+   ========================================================= */
+
+.teaching {
+    background: var(--paper-light);
+}
+
+.teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+}
+
+.teaching-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 40px;
+
+    border: 1px solid var(--line);
+
+    overflow: hidden;
+}
+
+.teaching-card::after {
+    content: "";
+
+    position: absolute;
+    right: -55px;
+    bottom: -55px;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    background: var(--sage);
+
+    opacity: .25;
+}
+
+.teaching-card:nth-child(2)::after {
+    background: var(--ochre);
+}
+
+.course-level {
+    color: var(--terracotta);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.teaching-card h3 {
+    font-size: 38px;
+
+    margin: 20px 0 15px;
+}
+
+.teaching-card p {
+    max-width: 520px;
+
+    font-size: 14px;
+    color: #5e6c68;
+}
+
+.course-school {
+    margin-top: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   15. TALKS
+   ========================================================= */
+
+.talks {
+    background: #dce5e1;
+}
+
+.timeline {
     max-width: 950px;
+
+    margin-top: 45px;
 }
 
-.feature-box h3 {
-    font-family: Georgia, serif;
-    font-size: 32px;
-    font-weight: normal;
-    margin-bottom: 15px;
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+
+    gap: 30px;
+
+    padding: 27px 0;
+
+    border-bottom: 1px solid rgba(24,51,47,.18);
 }
 
-.feature-box p {
-    max-width: 750px;
-    color: #596261;
+.timeline-year {
+    color: var(--terracotta);
+
+    font-family: var(--serif);
+    font-size: 20px;
 }
 
-/* CONTACT */
+.timeline-item h3 {
+    font-size: 23px;
+
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    font-size: 12px;
+    color: #64706c;
+}
+
+
+/* =========================================================
+   16. RESEARCH IN PRACTICE
+   ========================================================= */
+
+.practice {
+    background: var(--paper);
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 18px;
+}
+
+.practice-card {
+    padding: 30px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255,255,255,.32);
+}
+
+.practice-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.practice-card p {
+    color: #67716f;
+
+    font-size: 13px;
+}
+
+.practice-role {
+    margin-bottom: 18px;
+
+    color: var(--terracotta);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   17. METHODS
+   ========================================================= */
+
+.methods {
+    background: var(--ink);
+    color: white;
+}
+
+.methods h2 {
+    color: white;
+}
+
+.methods .section-label {
+    color: #e8906f;
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    margin-top: 50px;
+
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-left: 1px solid rgba(255,255,255,.2);
+}
+
+.method-box {
+    padding: 30px;
+
+    border-right: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.method-box h3 {
+    font-size: 24px;
+
+    margin-bottom: 17px;
+}
+
+.method-box p {
+    color: #bac7c3;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   18. CONTACT
+   ========================================================= */
 
 .contact {
     text-align: center;
-    padding: 120px 8%;
+
+    background: var(--ochre);
 }
 
 .contact h2 {
-    font-size: clamp(45px, 7vw, 80px);
+    font-size: clamp(48px, 7vw, 88px);
 }
 
 .contact p {
-    max-width: 600px;
-    margin: auto;
-    color: #606b69;
+    max-width: 670px;
+
+    margin: 0 auto 32px;
+
+    color: #495551;
 }
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   19. FOOTER
+   ========================================================= */
 
 footer {
-    border-top: 1px solid rgba(30,40,40,.15);
-    padding: 30px 8%;
+    padding: 28px 8%;
+
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    color: #687371;
+    gap: 20px;
+
+    border-top: 1px solid var(--line);
+
+    background: var(--paper);
+
+    font-size: 11px;
+    color: #68736f;
 }
 
-/* MOBILE */
 
-@media (max-width: 800px) {
+/* =========================================================
+   20. MOBILE
+   ========================================================= */
 
-    nav ul {
-        display: none;
-    }
-
-    .about-grid,
-    .research-grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 950px) {
 
     .hero {
-        min-height: 75vh;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 50px;
+        grid-template-columns: 1fr;
+        gap: 55px;
     }
 
     .hero-portrait {
-        width: 100%;
         justify-content: flex-start;
     }
 
+    .about-grid,
+    .doctoral-grid,
+    .feature-grid,
+    .quant-grid,
+    .rc21-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-grid,
+    .practice-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .snapshot-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .methods-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    nav {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 15px 6%;
+    }
+
+    nav ul {
+        width: 100%;
+
+        overflow-x: auto;
+
+        gap: 18px;
+
+        padding-bottom: 5px;
+
+        white-space: nowrap;
+    }
+
+    .hero {
+        padding: 60px 7% 75px;
+    }
+
     .portrait-frame {
-        width: min(360px, 90%);
+        width: min(350px, 92%);
     }
 
     .portrait-frame img {
@@ -351,176 +1303,1682 @@ footer {
     }
 
     section {
-        padding: 70px 7%;
+        padding: 75px 0;
+    }
+
+    .container {
+        width: 86%;
+    }
+
+    .research-grid,
+    .publication-grid,
+    .essay-grid,
+    .teaching-grid,
+    .practice-grid,
+    .methods-grid,
+    .snapshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-collage {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 260px);
+    }
+
+    .photo-slot.large {
+        grid-row: auto;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .metric-row {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
     }
 }
 
 </style>
+
 </head>
 
 
 <body>
+
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
 
 <nav>
 
 <div class="logo">AD.</div>
 
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#work">Selected Work</a></li>
-<li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Writing</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#talks">Talks</a></li>
+    <li><a href="#practice">Practice</a></li>
+    <li><a href="#contact">Contact</a></li>
 </ul>
 
 </nav>
 
 
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
 <header class="hero">
 
 <div class="hero-content">
 
-<div class="eyebrow">
-Climate-Induced Mobility · Meso-level Institutions · Urban Futures
+    <div class="eyebrow">
+        Urban Policy · Migration · Institutions · Quantitative Social Research
+    </div>
+
+    <h1>
+        Aratrika<br>
+        Debnath
+    </h1>
+
+    <div class="hero-text">
+        I study how institutions, infrastructures and environmental change
+        shape mobility, inequality, livelihoods and urban futures.
+    </div>
+
+    <p class="hero-subtext">
+        My work moves across climate mobility, migration governance,
+        quantitative social research, urban institutions and policy —
+        combining statistical analysis with grounded and interpretive inquiry.
+    </p>
+
+    <div class="hero-tags">
+        <div class="tag">Climate Mobility</div>
+        <div class="tag">Migration & Inequality</div>
+        <div class="tag">Urban Governance</div>
+        <div class="tag">Quantitative Research</div>
+        <div class="tag">Institutions</div>
+        <div class="tag">Spatial Methods</div>
+    </div>
+
 </div>
 
-<h1>Aratrika<br>Debnath</h1>
-
-<div class="hero-text">
-Researching climate mobility, livelihoods and the institutions
-that shape how people adapt, stay and move.
-</div>
-
-<div class="hero-tags">
-<div class="tag">Climate Mobility</div>
-<div class="tag">Urban Policy</div>
-<div class="tag">Migration</div>
-<div class="tag">Livelihoods</div>
-<div class="tag">Governance</div>
-</div>
-
-</div>
 
 <div class="hero-portrait">
+
     <div class="portrait-frame">
-        <img src="assets/images/aratrika.d_08.png"
-             alt="Portrait of Aratrika Debnath">
+
+        <img
+            src="assets/images/aratrika.d_08.png"
+            alt="Portrait of Aratrika Debnath"
+        >
+
         <div class="portrait-caption">
-            Researcher · New York
+            PhD Candidate · Public & Urban Policy · The New School
         </div>
+
     </div>
+
 </div>
 
 </header>
 
 
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
 <section class="about" id="about">
 
-<div class="section-label">01 — About</div>
+<div class="container">
 
-<h2>Research at the intersection of people, place and policy.</h2>
+    <div class="section-label">
+        01 — About
+    </div>
 
-<div class="about-grid">
+    <h2>
+        Research across people, institutions,
+        cities and environmental change.
+    </h2>
 
-<p>
-I am a researcher working across climate mobility, migration,
-urban policy and livelihoods. My work asks how environmental
-change becomes translated into household decisions to stay,
-adapt, circulate or migrate — and how institutions shape those
-possibilities before displacement becomes visible.
-</p>
+    <div class="about-grid">
 
-<div class="about-note">
-This website brings together my research, publications,
-fieldwork, teaching and ongoing projects.
-</div>
+        <div class="about-main">
+
+            I am a PhD candidate in Public and Urban Policy at The New School.
+            My research spans climate mobility, migration governance,
+            urban institutions, livelihood transitions and the infrastructures
+            through which inequality becomes experienced and governed.
+
+            <br><br>
+
+            I work across quantitative and interpretive traditions:
+            using regression, multidimensional deprivation measurement,
+            research databases and spatial analysis alongside institutional,
+            policy and science-and-technology-studies approaches.
+
+        </div>
+
+
+        <div class="about-side">
+
+            <p>
+                My doctoral work examines mobility, immobility and adaptation
+                under ecological stress, with particular attention to
+                institutions and anticipatory governance.
+            </p>
+
+            <p>
+                Beyond the dissertation, I work on urban inequality,
+                quantitative migration research, city governance,
+                protection pathways, policy systems and urban spatial life.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
+
+<!-- =========================================================
+     SNAPSHOT
+     ========================================================= -->
+
+<section class="snapshot">
+
+<div class="container">
+
+    <div class="section-label">
+        Research by the numbers
+    </div>
+
+    <h2>
+        Data, institutions and urban systems.
+    </h2>
+
+
+    <div class="snapshot-grid">
+
+        <div class="stat">
+            <div class="stat-number">4,278</div>
+            <div class="stat-label">
+                respondents analyzed across four African cities
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">10,000+</div>
+            <div class="stat-label">
+                migration papers retrieved for expert mapping
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">
+                devotional sites curated in Queens, New York
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">151</div>
+            <div class="stat-label">
+                countries tracked through an UN-Habitat programme dashboard
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH PROGRAMS
+     ========================================================= -->
 
 <section id="research">
 
-<div class="section-label">02 — Research</div>
+<div class="container">
 
-<h2>What I work on</h2>
+    <div class="section-label">
+        02 — Research
+    </div>
 
-<div class="research-grid">
+    <h2>
+        Research programs
+    </h2>
 
-<div class="card">
-<div class="card-number">01</div>
-<h3>Climate Mobility</h3>
-<p>
-Understanding mobility and immobility under slow-onset
-environmental change.
-</p>
-</div>
+    <p class="section-intro">
+        Rather than one disciplinary lane, my work develops across
+        connected questions about mobility, institutions, inequality,
+        cities and governance.
+    </p>
 
-<div class="card">
-<div class="card-number">02</div>
-<h3>Institutions & Livelihoods</h3>
-<p>
-Examining how collective and meso-level institutions shape
-household strategies and adaptive capacity.
-</p>
-</div>
 
-<div class="card">
-<div class="card-number">03</div>
-<h3>Urban Futures</h3>
-<p>
-Exploring how migration, displacement and adaptation become
-connected to cities before migrants physically arrive.
-</p>
-</div>
+    <div class="research-grid">
+
+
+        <div class="research-card">
+
+            <div class="research-number">01</div>
+
+            <h3>
+                Doctoral Research
+            </h3>
+
+            <p>
+                Climate mobility, livelihood transitions, mobility and
+                immobility under ecological stress, and the institutions
+                that shape household strategies before displacement becomes visible.
+            </p>
+
+            <div class="research-category">
+                Climate Mobility · Institutions
+            </div>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-number">02</div>
+
+            <h3>
+                Anticipatory Urbanism
+            </h3>
+
+            <p>
+                A theoretical project asking how migration and urbanization
+                look when attention shifts to the period before arrival:
+                preparation, waiting, circulation, adaptation and constrained mobility.
+            </p>
+
+            <div class="research-category">
+                Urban Theory · Migration
+            </div>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-number">03</div>
+
+            <h3>
+                Quantitative Migration & Urban Inequality
+            </h3>
+
+            <p>
+                Regression-based analysis of migration status,
+                infrastructure deprivation and inequality in low-income
+                urban settlements, alongside multidimensional index construction.
+            </p>
+
+            <div class="research-category">
+                Statistics · Inequality
+            </div>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-number">04</div>
+
+            <h3>
+                Protection Pathways & Migration Governance
+            </h3>
+
+            <p>
+                Research on climate-related displacement, protection pathways,
+                humanitarian-migration systems, adaptation institutions,
+                ecological profiling and human-security frameworks.
+            </p>
+
+            <div class="research-category">
+                Policy · Protection
+            </div>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-number">05</div>
+
+            <h3>
+                Cities, Fiscal Capacity & Climate Adaptation
+            </h3>
+
+            <p>
+                Comparative research on subnational fiscal capacity,
+                local climate adaptation, urban fragility, city-regions
+                and the institutional conditions that shape local response.
+            </p>
+
+            <div class="research-category">
+                Urban Governance · Finance
+            </div>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-number">06</div>
+
+            <h3>
+                Urban Space, Religion & Placemaking
+            </h3>
+
+            <p>
+                Research on how everyday urban environments are transformed
+                through religious practices, spatial adaptation and
+                transcultural forms of placemaking.
+            </p>
+
+            <div class="research-category">
+                Urban Space · Culture
+            </div>
+
+        </div>
+
+
+    </div>
 
 </div>
 
 </section>
 
 
-<section class="featured" id="work">
+<!-- =========================================================
+     DOCTORAL RESEARCH
+     ========================================================= -->
 
-<div class="section-label">03 — Selected Work</div>
+<section class="doctoral">
 
-<h2>Research, writing and ongoing projects.</h2>
+<div class="container">
 
-<div class="feature-box">
+    <div class="section-label">
+        Doctoral Research
+    </div>
 
-<h3>Anticipatory Urbanism</h3>
 
-<p>
-How intermediaries shape mobility and displacement across
-ecological gradients — and what becomes visible when migration
-is studied before arrival rather than only after movement occurs.
-</p>
+    <div class="doctoral-grid">
+
+        <div>
+
+            <h2>
+                Climate mobility before displacement becomes visible.
+            </h2>
+
+            <div class="big-quote">
+                How do institutions shape whether households adapt,
+                wait, circulate, remain, or move under ecological stress?
+            </div>
+
+        </div>
+
+
+        <div class="concept-list">
+
+            <div class="concept">
+                <span>Mobility & Immobility</span>
+                <span>Household strategies</span>
+            </div>
+
+            <div class="concept">
+                <span>Threshold Zones</span>
+                <span>Temporal governance</span>
+            </div>
+
+            <div class="concept">
+                <span>Meso-level Institutions</span>
+                <span>Intermediation</span>
+            </div>
+
+            <div class="concept">
+                <span>Livelihood Transitions</span>
+                <span>Adaptation</span>
+            </div>
+
+            <div class="concept">
+                <span>Anticipatory Governance</span>
+                <span>Before displacement</span>
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
+
+<!-- =========================================================
+     ANTICIPATORY URBANISM
+     ========================================================= -->
+
+<section class="anticipatory">
+
+<div class="container">
+
+    <div class="section-label">
+        Featured Research
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div>
+
+            <div class="feature-title">
+                Anticipatory<br>
+                Urbanism
+            </div>
+
+            <p class="feature-description">
+
+                <em>How Intermediaries Shape Mobility and Displacement
+                Across Ecological Gradients</em> asks what becomes visible
+                when migration research shifts attention from arrival to
+                the period in which households are already adapting,
+                preparing, circulating, waiting or becoming unable to move.
+
+            </p>
+
+
+            <div class="feature-meta">
+
+                <div class="meta-pill">
+                    Working Paper · 2026
+                </div>
+
+                <div class="meta-pill">
+                    RC21 Vienna
+                </div>
+
+                <div class="meta-pill">
+                    Urban Theory
+                </div>
+
+                <div class="meta-pill">
+                    Climate Mobility
+                </div>
+
+            </div>
+
+
+            <div class="feature-actions">
+
+                <a
+                    class="button"
+                    href="https://dx.doi.org/10.2139/ssrn.7024980"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Read on SSRN →
+                </a>
+
+                <a
+                    class="button"
+                    href="#rc21"
+                >
+                    RC21 Vienna →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="feature-side">
+
+            <strong>
+                Core question
+            </strong>
+
+            <p>
+                What changes theoretically and politically when migration
+                is studied before people arrive in cities rather than only
+                after movement has occurred?
+            </p>
+
+
+            <strong>
+                Contribution
+            </strong>
+
+            <p>
+                The project connects migration research with urban theory,
+                institutional intermediation and anticipatory forms of governance.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     QUANTITATIVE RESEARCH
+     ========================================================= -->
+
+<section class="quantitative">
+
+<div class="container">
+
+    <div class="section-label">
+        Quantitative Research
+    </div>
+
+    <h2>
+        Migration, deprivation and urban inequality.
+    </h2>
+
+    <p class="section-intro">
+        A parallel strand of my work uses survey data, statistical modeling,
+        multidimensional indices and research-data pipelines to examine
+        migration and inequality across cities and countries.
+    </p>
+
+
+    <div class="quant-grid">
+
+
+        <div class="quant-card accent">
+
+            <div class="quant-kicker">
+                Four African Cities
+            </div>
+
+            <h3>
+                Infrastructure deprivation in low-income urban settlements
+            </h3>
+
+            <p>
+                Analysis of migration status, mobility biography and
+                infrastructure deprivation using a harmonized household
+                survey across four African cities.
+            </p>
+
+
+            <div class="city-list">
+
+                <span class="city">Accra</span>
+                <span class="city">Dar es Salaam</span>
+                <span class="city">Freetown</span>
+                <span class="city">Monrovia</span>
+
+            </div>
+
+
+            <div class="metric-row">
+
+                <div class="metric">
+                    <strong>4,278</strong>
+                    <span>Respondents</span>
+                </div>
+
+                <div class="metric">
+                    <strong>5</strong>
+                    <span>Deprivation dimensions</span>
+                </div>
+
+                <div class="metric">
+                    <strong>4</strong>
+                    <span>Cities</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="quant-card">
+
+            <div class="quant-kicker">
+                Modeling
+            </div>
+
+            <h3>
+                From deprivation indices to migration models
+            </h3>
+
+            <p>
+                My quantitative work includes multidimensional deprivation
+                measurement, binary and ordered models, selection correction,
+                instrumental-variable strategies and interaction modeling.
+            </p>
+
+
+            <div class="method-chips">
+
+                <span class="method-chip">Probit</span>
+                <span class="method-chip">Instrumental Variables</span>
+                <span class="method-chip">Heckman</span>
+                <span class="method-chip">OLS</span>
+                <span class="method-chip">Composite Indices</span>
+                <span class="method-chip">Survey Analysis</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="quant-card">
+
+            <div class="quant-kicker">
+                Research Mapping
+            </div>
+
+            <h3>
+                Mapping global migration expertise
+            </h3>
+
+            <p>
+                An R-based pipeline using OpenAlex and Scopus to retrieve
+                more than 10,000 migration papers, identify authors,
+                score relevance, calculate research metrics and map
+                institutional expertise.
+            </p>
+
+        </div>
+
+
+        <div class="quant-card">
+
+            <div class="quant-kicker">
+                Cities & Climate Capacity
+            </div>
+
+            <h3>
+                Subnational finance, adaptation and urban fragility
+            </h3>
+
+            <p>
+                Comparative analysis connecting fiscal capacity,
+                subnational revenue and investment to the resources
+                available for local climate adaptation and urban response.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RC21 VIENNA
+     Upload photos later as:
+     assets/images/rc21-01.jpg
+     assets/images/rc21-02.jpg
+     assets/images/rc21-03.jpg
+     ========================================================= -->
+
+<section class="rc21" id="rc21">
+
+<div class="container">
+
+    <div class="rc21-grid">
+
+
+        <div class="rc21-copy">
+
+            <div class="section-label">
+                From the conference
+            </div>
+
+            <h2>
+                RC21<br>
+                Vienna 2026
+            </h2>
+
+            <p>
+                I presented <em>Anticipatory Urbanism: How Intermediaries
+                Shape Mobility and Displacement Across Ecological Gradients</em>
+                at the RC21 Conference on inequalities and the city.
+            </p>
+
+            <p>
+                The presentation explored how shifting migration research
+                toward the period before arrival changes the role we assign
+                to institutions, adaptation and urban policy.
+            </p>
+
+
+            <a
+                class="button light"
+                href="https://dx.doi.org/10.2139/ssrn.7024980"
+                target="_blank"
+                rel="noopener"
+            >
+                Read the paper →
+            </a>
+
+        </div>
+
+
+        <div class="photo-collage">
+
+
+            <div class="photo-slot large">
+
+                <img
+                    src="assets/images/rc21-01.jpg"
+                    alt="RC21 Vienna 2026"
+                    onerror="
+                        this.style.display='none';
+                        this.parentElement.classList.add('missing');
+                    "
+                >
+
+                <span>
+                    RC21<br>
+                    Vienna 2026
+                </span>
+
+            </div>
+
+
+            <div class="photo-slot">
+
+                <img
+                    src="assets/images/rc21-02.jpg"
+                    alt="RC21 conference presentation"
+                    onerror="
+                        this.style.display='none';
+                        this.parentElement.classList.add('missing');
+                    "
+                >
+
+                <span>
+                    Anticipatory<br>
+                    Urbanism
+                </span>
+
+            </div>
+
+
+            <div class="photo-slot">
+
+                <img
+                    src="assets/images/rc21-03.jpg"
+                    alt="RC21 Vienna conference"
+                    onerror="
+                        this.style.display='none';
+                        this.parentElement.classList.add('missing');
+                    "
+                >
+
+                <span>
+                    Research · Policy · Cities
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATIONS
+     ========================================================= -->
+
+<section class="publications" id="publications">
+
+<div class="container">
+
+    <div class="section-label">
+        03 — Research & Writing
+    </div>
+
+    <h2>
+        Selected publications and working papers
+    </h2>
+
+
+    <div class="publication-grid">
+
+
+        <article class="pub-card">
+
+            <div class="pub-type">
+                Working Paper · 2026
+            </div>
+
+            <h3>
+                Anticipatory Urbanism:
+                How Intermediaries Shape Mobility and Displacement
+                Across Ecological Gradients
+            </h3>
+
+            <p>
+                Climate mobility, intermediation and the period before arrival.
+            </p>
+
+            <div class="pub-links">
+
+                <a
+                    href="https://dx.doi.org/10.2139/ssrn.7024980"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    SSRN →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="pub-card">
+
+            <div class="pub-type">
+                Working Paper · 2025
+            </div>
+
+            <h3>
+                Modeling Nested Vulnerabilities:
+                A Multicausal Ecological Approach to
+                Climate-Induced Internal Displacement
+            </h3>
+
+            <p>
+                Quantitative analysis of compound vulnerability
+                and climate-related internal displacement.
+            </p>
+
+        </article>
+
+
+        <article class="pub-card">
+
+            <div class="pub-type">
+                Working Paper · 2024
+            </div>
+
+            <h3>
+                Preparedness and Adaptation in Climate-Induced Migration
+            </h3>
+
+            <p>
+                Politics of knowledge production and measurement
+                in global climate mobility governance.
+            </p>
+
+            <div class="pub-links">
+
+                <a
+                    href="https://ssrn.com/abstract=5463934"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    SSRN →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="pub-card">
+
+            <div class="pub-type">
+                Working Paper · 2025
+            </div>
+
+            <h3>
+                City-Regions and Care Infrastructures
+            </h3>
+
+            <p>
+                Special contribution to the GOLD VII report on
+                local democracy, decentralization and economies of care.
+            </p>
+
+            <div class="pub-links">
+
+                <a
+                    href="https://uclg.org/wp-content/uploads/2025/09/The-New-School_Final_GOLDVII.pdf"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    PDF →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="pub-card">
+
+            <div class="pub-type">
+                Working Paper · 2025
+            </div>
+
+            <h3>
+                Care in Urban Institutional Response during Crises
+            </h3>
+
+            <p>
+                Urban institutions, crisis response and care infrastructures.
+            </p>
+
+            <div class="pub-links">
+
+                <a
+                    href="https://uclg.org/wp-content/uploads/2025/02/SC_Embedding-care.pdf"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    PDF →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="pub-card">
+
+            <div class="pub-type">
+                UN Report · 2022
+            </div>
+
+            <h3>
+                Tomorrow Today Together —
+                Delivering the New Urban Agenda
+            </h3>
+
+            <p>
+                United Nations High-Level Meeting on the New Urban Agenda.
+            </p>
+
+            <div class="pub-links">
+
+                <a
+                    href="https://unhabitat.org/sites/default/files/2022/04/nua_tomorrow_today_together_digital_a.pdf"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Report →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ESSAYS
+     ========================================================= -->
+
+<section class="essays">
+
+<div class="container">
+
+    <div class="section-label">
+        Essays & Ideas
+    </div>
+
+    <h2>
+        Public writing beyond the academic paper.
+    </h2>
+
+
+    <div class="essay-grid">
+
+
+        <article class="essay-card">
+
+            <h3>
+                Giving Tele-Sketching Testimonies a Chance
+            </h3>
+
+            <p>
+                Feminist storytelling, emotional infrastructure
+                and everyday humanitarianism in the Sundarbans.
+            </p>
+
+            <a
+                href="https://www.indiachinainstitute.org/wp-content/uploads/2025/10/Aratrika-Final.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                Read essay →
+            </a>
+
+        </article>
+
+
+        <article class="essay-card">
+
+            <h3>
+                Finding Faith in Familiar Spaces
+            </h3>
+
+            <p>
+                Religion, spatial adaptation and the everyday city.
+            </p>
+
+            <a
+                href="https://www.urbanspacelab.org/post/finding-faith-in-familiar-spaces"
+                target="_blank"
+                rel="noopener"
+            >
+                Read essay →
+            </a>
+
+        </article>
+
+
+        <article class="essay-card">
+
+            <h3>
+                Religious Diversity and Transcultural Placemaking
+            </h3>
+
+            <p>
+                How religious and spatial practices produce
+                transcultural forms of urban belonging.
+            </p>
+
+            <a
+                href="https://www.urbanspacelab.org/post/religious-diversity-and-transcultural-placemaking"
+                target="_blank"
+                rel="noopener"
+            >
+                Read essay →
+            </a>
+
+        </article>
+
+
+        <article class="essay-card">
+
+            <h3>
+                Adapted for Devotion:
+                Toward a Conceptual Framework
+            </h3>
+
+            <p>
+                Architecture, religious diversity and transformed
+                devotional space in Queens.
+            </p>
+
+            <a
+                href="https://www.urbanspacelab.org/post/adapted-for-devotion-toward-a-conceptual-framework"
+                target="_blank"
+                rel="noopener"
+            >
+                Read essay →
+            </a>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     TEACHING
+     ========================================================= -->
+
+<section class="teaching" id="teaching">
+
+<div class="container">
+
+    <div class="section-label">
+        04 — Teaching
+    </div>
+
+    <h2>
+        Teaching cities through observation,
+        research and critical discussion.
+    </h2>
+
+
+    <div class="teaching-grid">
+
+
+        <div class="teaching-card">
+
+            <div class="course-level">
+                Graduate · Teaching Assistant Fellow
+            </div>
+
+            <h3>
+                Urban Century
+            </h3>
+
+            <p>
+                A graduate seminar examining cities and urbanization
+                through demographic, economic, institutional,
+                infrastructural, spatial, social and cultural perspectives.
+            </p>
+
+            <p class="course-school">
+                Julien J. Studley Graduate Programs in International Affairs
+                · The New School
+            </p>
+
+        </div>
+
+
+        <div class="teaching-card">
+
+            <div class="course-level">
+                Undergraduate · Teaching Assistant
+            </div>
+
+            <h3>
+                Urban Worlds
+            </h3>
+
+            <p>
+                Teaching and mentoring undergraduate students through
+                lecture-discussion sessions, urban observation,
+                field trips and research-paper development.
+            </p>
+
+            <p class="course-school">
+                Eugene Lang College of Liberal Arts
+                · The New School
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     TALKS + CONFERENCES
+     ========================================================= -->
+
+<section class="talks" id="talks">
+
+<div class="container">
+
+    <div class="section-label">
+        05 — Conferences & Talks
+    </div>
+
+    <h2>
+        Presenting work across migration,
+        climate and urban studies.
+    </h2>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                2026
+            </div>
+
+            <div>
+
+                <h3>
+                    Anticipatory Urbanism
+                </h3>
+
+                <p>
+                    RC21 Conference · Vienna, Austria
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                2026
+            </div>
+
+            <div>
+
+                <h3>
+                    Intermediated Preparedness:
+                    Rethinking Climate Mobility Through
+                    Cross-Ecosystem Governance
+                </h3>
+
+                <p>
+                    Environmental and Climate Mobilities Network
+                    · Wageningen, Netherlands
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                2026
+            </div>
+
+            <div>
+
+                <h3>
+                    Climate Change and the New Roles of Cities
+                </h3>
+
+                <p>
+                    Uncertainty and Cities in 2026
+                    · The New School · New York
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                2025
+            </div>
+
+            <div>
+
+                <h3>
+                    Ecological Futures and Design Pathways
+                    for Climate Migration
+                </h3>
+
+                <p>
+                    ECMN Conference · UNU-EHS · Bonn, Germany
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                2021
+            </div>
+
+            <div>
+
+                <h3>
+                    Participatory Urban Governance
+                    in Solid Waste Management
+                </h3>
+
+                <p>
+                    Tata Institute of Social Sciences · Mumbai, India
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH IN PRACTICE
+     ========================================================= -->
+
+<section class="practice" id="practice">
+
+<div class="container">
+
+    <div class="section-label">
+        06 — Research in Practice
+    </div>
+
+    <h2>
+        Research across academic,
+        policy and international institutions.
+    </h2>
+
+
+    <div class="practice-grid">
+
+
+        <div class="practice-card">
+
+            <div class="practice-role">
+                Research Associate
+            </div>
+
+            <h3>
+                Zolberg Institute on Migration and Mobility
+            </h3>
+
+            <p>
+                Quantitative migration research, infrastructure deprivation,
+                African cities datasets and global migration expertise mapping.
+            </p>
+
+        </div>
+
+
+        <div class="practice-card">
+
+            <div class="practice-role">
+                Fellow
+            </div>
+
+            <h3>
+                International Rescue Committee × Zolberg Institute
+            </h3>
+
+            <p>
+                Protection pathways, climate-related displacement,
+                ecological profiling and migration governance.
+            </p>
+
+        </div>
+
+
+        <div class="practice-card">
+
+            <div class="practice-role">
+                Research Assistant
+            </div>
+
+            <h3>
+                Observatory of Latin America × UCLG
+            </h3>
+
+            <p>
+                Subnational fiscal capacity, adaptation,
+                city-regions, care infrastructures and urban governance.
+            </p>
+
+        </div>
+
+
+        <div class="practice-card">
+
+            <div class="practice-role">
+                Research Assistant
+            </div>
+
+            <h3>
+                Urban Space Lab
+            </h3>
+
+            <p>
+                Religious diversity, devotional space,
+                urban transformation and transcultural placemaking in Queens.
+            </p>
+
+        </div>
+
+
+        <div class="practice-card">
+
+            <div class="practice-role">
+                Programme Development
+            </div>
+
+            <h3>
+                UN-Habitat
+            </h3>
+
+            <p>
+                SDG localization, national development planning,
+                crisis response, urban policy analysis,
+                NLP-assisted research and programme dashboards.
+            </p>
+
+        </div>
+
+
+        <div class="practice-card">
+
+            <div class="practice-role">
+                Research Associate
+            </div>
+
+            <h3>
+                School of Planning and Architecture, Bhopal
+            </h3>
+
+            <p>
+                Urban missions, SDG localization,
+                institutional convergence and urban governance in India.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     METHODS
+     ========================================================= -->
+
+<section class="methods">
+
+<div class="container">
+
+    <div class="section-label">
+        Methods
+    </div>
+
+    <h2>
+        Mixed methods, quantitative models
+        and research systems.
+    </h2>
+
+
+    <div class="methods-grid">
+
+
+        <div class="method-box">
+
+            <h3>
+                Quantitative
+            </h3>
+
+            <p>
+                Regression modeling · probit · OLS · instrumental variables ·
+                Heckman models · interactions · robust regression ·
+                Blinder–Oaxaca decomposition · deprivation indices ·
+                survey analysis
+            </p>
+
+        </div>
+
+
+        <div class="method-box">
+
+            <h3>
+                Data Systems
+            </h3>
+
+            <p>
+                R · Python · OpenAlex · Scopus ·
+                research database design · literature mapping ·
+                NLP-assisted policy analysis · dashboards
+            </p>
+
+        </div>
+
+
+        <div class="method-box">
+
+            <h3>
+                Spatial
+            </h3>
+
+            <p>
+                QGIS · Sentinel-2 · NDWI ·
+                settlement-growth analysis · exposure mapping ·
+                infrastructure vulnerability · climate-risk mapping
+            </p>
+
+        </div>
+
+
+        <div class="method-box">
+
+            <h3>
+                Qualitative
+            </h3>
+
+            <p>
+                Stakeholder analysis · institutional mapping ·
+                participatory planning · policy research ·
+                interpretive analysis · site-based research
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
 
 <section class="contact" id="contact">
 
-<div class="section-label">04 — Connect</div>
+<div class="container">
 
-<h2>Let's stay in conversation.</h2>
+    <div class="section-label">
+        07 — Connect
+    </div>
 
-<p>
-For research collaborations, academic conversations,
-policy work and speaking opportunities.
-</p>
+    <h2>
+        Let's stay in conversation.
+    </h2>
+
+    <p>
+        For research collaborations, academic conversations,
+        policy work, teaching and speaking opportunities.
+    </p>
+
+
+    <div class="contact-links">
+
+        <a
+            class="button"
+            href="mailto:aratrika.arch@gmail.com"
+        >
+            Email →
+        </a>
+
+        <a
+            class="button"
+            href="https://www.linkedin.com/in/aratrikad"
+            target="_blank"
+            rel="noopener"
+        >
+            LinkedIn →
+        </a>
+
+        <!--
+        AFTER YOU UPLOAD YOUR CV PDF TO:
+        assets/Aratrika-Debnath-CV.pdf
+
+        remove the comment marks around this button:
+
+        <a
+            class="button"
+            href="assets/Aratrika-Debnath-CV.pdf"
+            target="_blank"
+        >
+            Download CV →
+        </a>
+        -->
+
+    </div>
+
+</div>
 
 </section>
 
 
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
 <footer>
 
-<div>© 2026 Aratrika Debnath</div>
+<div>
+    © 2026 Aratrika Debnath
+</div>
 
-<div>New York · India · Beyond</div>
+<div>
+    Research · Policy · Cities · Migration
+</div>
 
 </footer>
+
 
 </body>
 </html>
