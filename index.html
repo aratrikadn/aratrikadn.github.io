@@ -12,9 +12,9 @@
     content="Aratrika Debnath is an urban policy researcher working across climate mobility, migration, institutions, quantitative social research, livelihoods and cities."
 >
 
-<!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet"
@@ -23,25 +23,20 @@
 <style>
 
 /* =========================================================
-   1. COLOR + FONT SYSTEM
-   Change these later if you want a different visual palette.
+   COLOR SYSTEM
    ========================================================= */
 
 :root {
-
     --paper: #f4efe6;
     --paper-light: #fbf8f1;
-
     --ink: #18332f;
     --ink-soft: #324c48;
-
     --terracotta: #c9684b;
     --ochre: #d6a442;
     --sage: #91a99f;
     --blue: #7e9fa7;
     --rose: #d4a095;
-
-    --line: rgba(24, 51, 47, 0.16);
+    --line: rgba(24,51,47,.16);
 
     --serif: "DM Serif Display", Georgia, serif;
     --sans: "Manrope", Arial, sans-serif;
@@ -49,7 +44,7 @@
 
 
 /* =========================================================
-   2. GLOBAL
+   GLOBAL
    ========================================================= */
 
 * {
@@ -115,13 +110,14 @@ section {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: var(--serif);
     font-weight: 400;
 }
 
 h2 {
-    font-size: clamp(40px, 5vw, 64px);
+    font-size: clamp(40px,5vw,64px);
     line-height: 1.05;
     margin-bottom: 25px;
 }
@@ -134,17 +130,13 @@ h3 {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-
     padding: 11px 17px;
-
     border: 1px solid var(--ink);
     text-decoration: none;
-
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-
     transition: .2s ease;
 }
 
@@ -165,7 +157,7 @@ h3 {
 
 
 /* =========================================================
-   3. NAVIGATION
+   NAVIGATION
    ========================================================= */
 
 nav {
@@ -174,7 +166,6 @@ nav {
     z-index: 100;
 
     width: 100%;
-
     padding: 18px 7%;
 
     display: flex;
@@ -183,7 +174,6 @@ nav {
     gap: 30px;
 
     background: rgba(244,239,230,.94);
-
     border-bottom: 1px solid var(--line);
 
     backdrop-filter: blur(10px);
@@ -198,7 +188,6 @@ nav ul {
     display: flex;
     align-items: center;
     gap: 25px;
-
     list-style: none;
 }
 
@@ -214,7 +203,7 @@ nav a:hover {
 
 
 /* =========================================================
-   4. HERO
+   HERO
    ========================================================= */
 
 .hero {
@@ -230,40 +219,31 @@ nav a:hover {
 
 .eyebrow {
     color: var(--terracotta);
-
     text-transform: uppercase;
     letter-spacing: 3px;
-
     font-size: 12px;
     font-weight: 700;
-
     margin-bottom: 25px;
 }
 
 h1 {
-    font-size: clamp(64px, 8vw, 112px);
+    font-size: clamp(64px,8vw,112px);
     line-height: .88;
-
     color: var(--ink);
-
     margin-bottom: 35px;
 }
 
 .hero-text {
     font-family: var(--serif);
-    font-size: clamp(23px, 2.8vw, 34px);
+    font-size: clamp(23px,2.8vw,34px);
     line-height: 1.35;
-
     max-width: 850px;
-
     color: #465d58;
 }
 
 .hero-subtext {
     max-width: 720px;
-
     margin-top: 25px;
-
     font-size: 15px;
     color: #6a7774;
 }
@@ -272,23 +252,16 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
-
     margin-top: 35px;
 }
 
 .tag {
     padding: 8px 14px;
-
     border: 1px solid #84958f;
     border-radius: 30px;
-
     background: rgba(255,255,255,.35);
-
     font-size: 11px;
 }
-
-
-/* HERO PORTRAIT */
 
 .hero-portrait {
     display: flex;
@@ -296,56 +269,44 @@ h1 {
 }
 
 .portrait-frame {
-    width: min(410px, 100%);
+    width: min(410px,100%);
     position: relative;
 }
 
 .portrait-frame::before {
     content: "";
-
     position: absolute;
-
     width: 100%;
     height: 100%;
-
     top: 18px;
     left: 18px;
-
     border: 1px solid var(--terracotta);
 }
 
 .portrait-frame img {
     position: relative;
-
     width: 100%;
     height: 540px;
-
     object-fit: cover;
     object-position: center top;
-
     display: block;
-
     z-index: 1;
 }
 
 .portrait-caption {
     position: relative;
     z-index: 2;
-
     margin-top: 18px;
-
     color: #7a6f68;
-
     font-size: 10px;
     font-weight: 600;
-
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 
 /* =========================================================
-   5. ABOUT
+   ABOUT
    ========================================================= */
 
 .about {
@@ -365,16 +326,13 @@ h1 {
     display: grid;
     grid-template-columns: 1.4fr .6fr;
     gap: 85px;
-
     align-items: start;
 }
 
 .about-main {
     font-family: var(--serif);
-
-    font-size: clamp(21px, 2vw, 27px);
+    font-size: clamp(21px,2vw,27px);
     line-height: 1.6;
-
     color: #f0ebe1;
 }
 
@@ -391,7 +349,7 @@ h1 {
 
 
 /* =========================================================
-   6. RESEARCH SNAPSHOT
+   RESEARCH SNAPSHOT
    ========================================================= */
 
 .snapshot {
@@ -402,7 +360,7 @@ h1 {
     margin-top: 55px;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 
     border-top: 1px solid var(--line);
     border-left: 1px solid var(--line);
@@ -410,17 +368,14 @@ h1 {
 
 .stat {
     padding: 35px 28px;
-
     border-right: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
 }
 
 .stat-number {
     font-family: var(--serif);
-
     font-size: 45px;
     color: var(--terracotta);
-
     line-height: 1;
     margin-bottom: 10px;
 }
@@ -433,25 +388,22 @@ h1 {
 
 
 /* =========================================================
-   7. RESEARCH PROGRAMS
+   RESEARCH PROGRAMS
    ========================================================= */
 
 .research-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
 
 .research-card {
     min-height: 340px;
-
     display: flex;
     flex-direction: column;
-
     padding: 32px;
 
     border: 1px solid var(--line);
-
     background: rgba(255,255,255,.34);
 
     transition: transform .25s ease, background .25s ease;
@@ -465,9 +417,7 @@ h1 {
 .research-number {
     font-family: var(--serif);
     font-size: 18px;
-
     color: var(--terracotta);
-
     margin-bottom: 45px;
 }
 
@@ -484,19 +434,16 @@ h1 {
 .research-category {
     margin-top: auto;
     padding-top: 26px;
-
     color: #8b5e4d;
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 1.8px;
     text-transform: uppercase;
 }
 
 
 /* =========================================================
-   8. DOCTORAL RESEARCH FEATURE
+   DOCTORAL RESEARCH
    ========================================================= */
 
 .doctoral {
@@ -507,15 +454,13 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 85px;
-
     align-items: center;
 }
 
 .big-quote {
     font-family: var(--serif);
-    font-size: clamp(29px, 3vw, 44px);
+    font-size: clamp(29px,3vw,44px);
     line-height: 1.25;
-
     color: var(--ink);
 }
 
@@ -528,9 +473,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 17px 0;
-
     border-bottom: 1px solid rgba(24,51,47,.2);
 }
 
@@ -542,14 +485,13 @@ h1 {
 .concept span:last-child {
     color: #6b7774;
     font-size: 11px;
-
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 
 /* =========================================================
-   9. ANTICIPATORY URBANISM
+   ANTICIPATORY URBANISM
    ========================================================= */
 
 .anticipatory {
@@ -559,30 +501,25 @@ h1 {
 .feature-grid {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
-
     gap: 80px;
     align-items: end;
 }
 
 .feature-title {
     font-family: var(--serif);
-
-    font-size: clamp(42px, 6vw, 78px);
+    font-size: clamp(42px,6vw,78px);
     line-height: .98;
-
     margin-bottom: 25px;
 }
 
 .feature-description {
     max-width: 720px;
-
     font-size: 17px;
     color: #3e4a47;
 }
 
 .feature-meta {
     margin-top: 32px;
-
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -590,9 +527,7 @@ h1 {
 
 .meta-pill {
     border: 1px solid rgba(24,51,47,.5);
-
     padding: 7px 12px;
-
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -602,7 +537,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-
     margin-top: 30px;
 }
 
@@ -613,9 +547,7 @@ h1 {
 
 .feature-side strong {
     display: block;
-
     margin-bottom: 9px;
-
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -628,128 +560,403 @@ h1 {
 
 
 /* =========================================================
-   10. QUANTITATIVE RESEARCH
+   AFRICAN CITIES
    ========================================================= */
 
 .quantitative {
     background: var(--paper-light);
 }
 
-.quant-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: 30px;
+/* Project introduction */
+
+.africa-intro {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 70px;
+    align-items: center;
 }
 
-.quant-card {
-    border: 1px solid var(--line);
+.africa-intro .section-intro {
+    margin-bottom: 0;
+}
 
-    padding: 38px;
+.africa-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.africa-methods span {
+    padding: 7px 11px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.45);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+
+/* Map */
+
+.africa-map {
+    padding: 18px;
+    background: white;
+    border: 1px solid var(--line);
+}
+
+.africa-map img {
+    width: 100%;
+    display: block;
+}
+
+.africa-map figcaption,
+.research-visual figcaption,
+.large-model-figure figcaption,
+.tenure-feature figcaption,
+.archetype-figure figcaption {
+    margin-top: 12px;
+    color: #78837f;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* Numbers */
+
+.africa-stats {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    margin: 75px 0 110px;
+
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+}
+
+.africa-stat {
+    padding: 28px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.africa-stat strong {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--terracotta);
+    font-family: var(--serif);
+    font-size: 43px;
+    line-height: 1;
+}
+
+.africa-stat span {
+    color: #67736f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Survey and deprivation visual stories */
+
+.research-visual {
+    display: grid;
+    grid-template-columns: .65fr 1.35fr;
+    gap: 55px;
+    align-items: center;
+    margin: 90px 0;
+}
+
+.research-visual.reverse {
+    grid-template-columns: 1.3fr .7fr;
+}
+
+.research-visual.reverse figure {
+    order: 1;
+}
+
+.research-visual.reverse .visual-copy {
+    order: 2;
+}
+
+.visual-number {
+    margin-bottom: 11px;
+    color: var(--terracotta);
+    font-family: var(--serif);
+    font-size: 20px;
+}
+
+.visual-kicker {
+    margin-bottom: 18px;
+    color: var(--terracotta);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.visual-copy h3,
+.model-copy h3,
+.tenure-copy h3 {
+    margin-bottom: 20px;
+    font-size: clamp(31px,4vw,48px);
+    line-height: 1.08;
+}
+
+.visual-copy p,
+.model-copy p,
+.tenure-copy p {
+    margin-bottom: 16px;
+    color: #64706c;
+    font-size: 14px;
+}
+
+.research-visual figure {
+    padding: 18px;
+    background: white;
+    border: 1px solid var(--line);
+}
+
+.research-visual img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Findings */
+
+.findings-heading {
+    max-width: 900px;
+    margin: 120px 0 40px;
+}
+
+.findings-heading h3 {
+    max-width: 800px;
+    margin-bottom: 18px;
+    font-size: clamp(33px,4vw,50px);
+}
+
+.findings-heading p {
+    max-width: 720px;
+    color: #64706c;
+    font-size: 15px;
+}
+
+.finding-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+    margin-bottom: 115px;
+}
+
+.finding-card {
+    min-height: 300px;
+    padding: 30px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+}
+
+.finding-number {
+    margin-bottom: 35px;
+    color: var(--terracotta);
+    font-family: var(--serif);
+    font-size: 19px;
+}
+
+.finding-card h4 {
+    margin-bottom: 16px;
+    font-size: 27px;
+    line-height: 1.12;
+}
+
+.finding-card p {
+    color: #64706c;
+    font-size: 13px;
+}
+
+
+/* Probit */
+
+.model-section {
+    display: grid;
+    grid-template-columns: .65fr 1.35fr;
+    gap: 60px;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.large-model-figure {
+    padding: 18px;
+    background: white;
+    border: 1px solid var(--line);
+}
+
+.large-model-figure img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Length of residence */
+
+.tenure-feature {
+    display: grid;
+    grid-template-columns: .65fr 1.35fr;
+    gap: 60px;
+    align-items: center;
+    margin: 110px 0;
+}
+
+.tenure-feature figure {
+    padding: 18px;
+    background: white;
+    border: 1px solid var(--line);
+}
+
+.tenure-feature figure img {
+    width: 100%;
+    display: block;
+}
+
+.tenure-highlight {
+    margin-top: 27px;
+    padding: 22px;
+    background: #dfe6df;
+    border-left: 3px solid var(--terracotta);
+
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+/* Archetypes */
+
+.archetype-feature {
+    margin-top: 125px;
+}
+
+.archetype-heading {
+    display: grid;
+    grid-template-columns: 1fr .7fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 42px;
+}
+
+.archetype-heading h3 {
+    font-size: clamp(33px,4vw,50px);
+    line-height: 1.08;
+}
+
+.archetype-heading > p {
+    color: #65716d;
+    font-size: 14px;
+}
+
+.archetype-figure {
+    padding: 15px;
+    background: #111;
+    border: 1px solid var(--line);
+}
+
+.archetype-figure img {
+    width: 100%;
+    display: block;
+}
+
+.archetype-figure figcaption {
+    padding: 9px 5px 2px;
+    color: #aaa;
+}
+
+.archetype-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    margin-top: 20px;
+
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+}
+
+.archetype-card {
+    min-height: 315px;
+    padding: 27px;
 
     background: var(--paper);
+
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 }
 
-.quant-card.accent {
+.archetype-card > span {
+    display: block;
+    margin-bottom: 35px;
+    color: var(--terracotta);
+    font-family: var(--serif);
+    font-size: 18px;
+}
+
+.archetype-card h4 {
+    margin-bottom: 15px;
+    font-size: 23px;
+    line-height: 1.12;
+}
+
+.archetype-card p {
+    color: #66716e;
+    font-size: 12px;
+}
+
+.archetype-card.emphasis {
+    background: var(--ink);
+}
+
+.archetype-card.emphasis h4 {
+    color: white;
+}
+
+.archetype-card.emphasis p {
+    color: #c7d0cd;
+}
+
+
+/* Takeaway */
+
+.africa-takeaway {
+    display: grid;
+    grid-template-columns: .22fr .78fr;
+    gap: 45px;
+
+    margin-top: 90px;
+    padding: 45px;
+
     background: var(--ink);
     color: white;
 }
 
-.quant-kicker {
+.takeaway-label {
+    color: #e8906f;
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 2px;
     text-transform: uppercase;
-
-    color: var(--terracotta);
-
-    margin-bottom: 20px;
 }
 
-.quant-card.accent .quant-kicker {
-    color: #eaa07e;
-}
-
-.quant-card h3 {
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-
-.quant-card p {
-    color: #5d6a67;
-    font-size: 14px;
-}
-
-.quant-card.accent p {
-    color: #c9d1ce;
-}
-
-.city-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-
-    margin: 28px 0;
-}
-
-.city {
-    padding: 7px 12px;
-
-    border: 1px solid currentColor;
-
-    border-radius: 30px;
-
-    font-size: 11px;
-}
-
-.metric-row {
-    margin-top: 32px;
-
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-
-    border-top: 1px solid rgba(255,255,255,.22);
-}
-
-.metric {
-    padding: 22px 15px 0 0;
-}
-
-.metric strong {
-    display: block;
-
+.africa-takeaway p {
+    color: #f1ece3;
     font-family: var(--serif);
-    font-size: 27px;
-}
-
-.metric span {
-    font-size: 10px;
-    color: #b7c3bf;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.method-chips {
-    margin-top: 28px;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.method-chip {
-    background: rgba(126,159,167,.16);
-
-    padding: 7px 10px;
-
-    font-size: 10px;
+    font-size: clamp(23px,3vw,34px);
+    line-height: 1.4;
 }
 
 
 /* =========================================================
-   11. RC21 VIENNA FEATURE
+   RC21 VIENNA
    ========================================================= */
 
 .rc21 {
@@ -768,39 +975,27 @@ h1 {
 .rc21-grid {
     display: grid;
     grid-template-columns: .85fr 1.15fr;
-
     gap: 70px;
     align-items: center;
 }
 
 .rc21-copy p {
     color: #c8d2cf;
-
     margin-bottom: 25px;
-
     max-width: 550px;
 }
 
-
-/* PHOTO COLLAGE */
-
 .photo-collage {
     display: grid;
-
     grid-template-columns: 1.2fr .8fr;
     grid-template-rows: 230px 230px;
-
     gap: 12px;
 }
 
 .photo-slot {
     position: relative;
-
     overflow: hidden;
-
-    background:
-        linear-gradient(135deg, #c86b4c, #d5a443);
-
+    background: linear-gradient(135deg,#c86b4c,#d5a443);
     min-height: 180px;
 }
 
@@ -811,38 +1006,13 @@ h1 {
 .photo-slot img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-}
-
-.photo-slot span {
-    display: none;
-}
-
-.photo-slot.missing span {
-    display: flex;
-
-    width: 100%;
-    height: 100%;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 25px;
-
-    font-family: var(--serif);
-    font-size: 25px;
-
-    color: white;
 }
 
 
 /* =========================================================
-   12. PUBLICATIONS
+   PUBLICATIONS
    ========================================================= */
 
 .publications {
@@ -852,27 +1022,21 @@ h1 {
 .publication-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-
     gap: 18px;
 }
 
 .pub-card {
     padding: 30px;
-
     border-top: 1px solid var(--ink);
-
     background: rgba(255,255,255,.35);
 }
 
 .pub-type {
     color: var(--terracotta);
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 2px;
     text-transform: uppercase;
-
     margin-bottom: 15px;
 }
 
@@ -888,26 +1052,22 @@ h1 {
 
 .pub-links {
     margin-top: 22px;
-
     display: flex;
     gap: 18px;
 }
 
 .pub-links a {
     text-decoration: none;
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 1px;
     text-transform: uppercase;
-
     color: var(--terracotta);
 }
 
 
 /* =========================================================
-   13. ESSAYS
+   ESSAYS
    ========================================================= */
 
 .essays {
@@ -917,7 +1077,6 @@ h1 {
 .essay-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-
     gap: 18px;
 }
 
@@ -930,7 +1089,6 @@ h1 {
     padding: 30px;
 
     background: rgba(255,255,255,.5);
-
     border: 1px solid rgba(24,51,47,.14);
 }
 
@@ -947,21 +1105,17 @@ h1 {
 .essay-card a {
     margin-top: auto;
     padding-top: 22px;
-
     text-decoration: none;
-
     color: var(--terracotta);
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 
 /* =========================================================
-   14. TEACHING
+   TEACHING
    ========================================================= */
 
 .teaching {
@@ -971,36 +1125,26 @@ h1 {
 .teaching-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-
     gap: 25px;
 }
 
 .teaching-card {
     position: relative;
-
     min-height: 330px;
-
     padding: 40px;
-
     border: 1px solid var(--line);
-
     overflow: hidden;
 }
 
 .teaching-card::after {
     content: "";
-
     position: absolute;
     right: -55px;
     bottom: -55px;
-
     width: 160px;
     height: 160px;
-
     border-radius: 50%;
-
     background: var(--sage);
-
     opacity: .25;
 }
 
@@ -1010,37 +1154,32 @@ h1 {
 
 .course-level {
     color: var(--terracotta);
-
     font-size: 10px;
     font-weight: 700;
-
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .teaching-card h3 {
     font-size: 38px;
-
     margin: 20px 0 15px;
 }
 
 .teaching-card p {
     max-width: 520px;
-
     font-size: 14px;
     color: #5e6c68;
 }
 
 .course-school {
     margin-top: 30px;
-
     font-size: 11px;
     font-weight: 700;
 }
 
 
 /* =========================================================
-   15. TALKS
+   TALKS
    ========================================================= */
 
 .talks {
@@ -1049,31 +1188,25 @@ h1 {
 
 .timeline {
     max-width: 950px;
-
     margin-top: 45px;
 }
 
 .timeline-item {
     display: grid;
     grid-template-columns: 120px 1fr;
-
     gap: 30px;
-
     padding: 27px 0;
-
     border-bottom: 1px solid rgba(24,51,47,.18);
 }
 
 .timeline-year {
     color: var(--terracotta);
-
     font-family: var(--serif);
     font-size: 20px;
 }
 
 .timeline-item h3 {
     font-size: 23px;
-
     margin-bottom: 5px;
 }
 
@@ -1084,7 +1217,7 @@ h1 {
 
 
 /* =========================================================
-   16. RESEARCH IN PRACTICE
+   RESEARCH IN PRACTICE
    ========================================================= */
 
 .practice {
@@ -1094,15 +1227,12 @@ h1 {
 .practice-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-
     gap: 18px;
 }
 
 .practice-card {
     padding: 30px;
-
     border: 1px solid var(--line);
-
     background: rgba(255,255,255,.32);
 }
 
@@ -1113,25 +1243,21 @@ h1 {
 
 .practice-card p {
     color: #67716f;
-
     font-size: 13px;
 }
 
 .practice-role {
     margin-bottom: 18px;
-
     color: var(--terracotta);
-
     font-size: 10px;
     font-weight: 700;
-
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 
 /* =========================================================
-   17. METHODS
+   METHODS
    ========================================================= */
 
 .methods {
@@ -1159,43 +1285,37 @@ h1 {
 
 .method-box {
     padding: 30px;
-
     border-right: 1px solid rgba(255,255,255,.2);
     border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .method-box h3 {
     font-size: 24px;
-
     margin-bottom: 17px;
 }
 
 .method-box p {
     color: #bac7c3;
-
     font-size: 12px;
 }
 
 
 /* =========================================================
-   18. CONTACT
+   CONTACT
    ========================================================= */
 
 .contact {
     text-align: center;
-
     background: var(--ochre);
 }
 
 .contact h2 {
-    font-size: clamp(48px, 7vw, 88px);
+    font-size: clamp(48px,7vw,88px);
 }
 
 .contact p {
     max-width: 670px;
-
     margin: 0 auto 32px;
-
     color: #495551;
 }
 
@@ -1203,24 +1323,21 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
     gap: 12px;
 }
 
 
 /* =========================================================
-   19. FOOTER
+   FOOTER
    ========================================================= */
 
 footer {
     padding: 28px 8%;
-
     display: flex;
     justify-content: space-between;
     gap: 20px;
 
     border-top: 1px solid var(--line);
-
     background: var(--paper);
 
     font-size: 11px;
@@ -1229,7 +1346,7 @@ footer {
 
 
 /* =========================================================
-   20. MOBILE
+   TABLET
    ========================================================= */
 
 @media (max-width: 950px) {
@@ -1246,9 +1363,19 @@ footer {
     .about-grid,
     .doctoral-grid,
     .feature-grid,
-    .quant-grid,
-    .rc21-grid {
+    .rc21-grid,
+    .africa-intro,
+    .research-visual,
+    .research-visual.reverse,
+    .model-section,
+    .tenure-feature,
+    .archetype-heading {
         grid-template-columns: 1fr;
+    }
+
+    .research-visual.reverse figure,
+    .research-visual.reverse .visual-copy {
+        order: initial;
     }
 
     .research-grid,
@@ -1260,32 +1387,42 @@ footer {
         grid-template-columns: repeat(2,1fr);
     }
 
+    .finding-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .archetype-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
     .methods-grid {
         grid-template-columns: repeat(2,1fr);
     }
+
+    .africa-takeaway {
+        grid-template-columns: 1fr;
+    }
 }
 
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 700px) {
 
     nav {
         align-items: flex-start;
         flex-direction: column;
-
         gap: 10px;
-
         padding: 15px 6%;
     }
 
     nav ul {
         width: 100%;
-
         overflow-x: auto;
-
         gap: 18px;
-
         padding-bottom: 5px;
-
         white-space: nowrap;
     }
 
@@ -1294,7 +1431,7 @@ footer {
     }
 
     .portrait-frame {
-        width: min(350px, 92%);
+        width: min(350px,92%);
     }
 
     .portrait-frame img {
@@ -1320,9 +1457,17 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .africa-stats {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .archetype-grid {
+        grid-template-columns: 1fr;
+    }
+
     .photo-collage {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 260px);
+        grid-template-rows: repeat(3,260px);
     }
 
     .photo-slot.large {
@@ -1332,10 +1477,6 @@ footer {
     .timeline-item {
         grid-template-columns: 1fr;
         gap: 8px;
-    }
-
-    .metric-row {
-        grid-template-columns: 1fr;
     }
 
     footer {
@@ -1362,6 +1503,7 @@ footer {
 <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#research">Research</a></li>
+    <li><a href="#african-cities">Data</a></li>
     <li><a href="#publications">Writing</a></li>
     <li><a href="#teaching">Teaching</a></li>
     <li><a href="#talks">Talks</a></li>
@@ -1507,7 +1649,6 @@ footer {
         Data, institutions and urban systems.
     </h2>
 
-
     <div class="snapshot-grid">
 
         <div class="stat">
@@ -1534,7 +1675,7 @@ footer {
         <div class="stat">
             <div class="stat-number">151</div>
             <div class="stat-label">
-                countries tracked through an UN-Habitat programme dashboard
+                countries tracked through a UN-Habitat programme dashboard
             </div>
         </div>
 
@@ -1716,7 +1857,6 @@ footer {
         Doctoral Research
     </div>
 
-
     <div class="doctoral-grid">
 
         <div>
@@ -1726,8 +1866,8 @@ footer {
             </h2>
 
             <div class="big-quote">
-                How do institutions shape whether households adapt,
-                wait, circulate, remain, or move under ecological stress?
+                How do institutions shape whether households
+                adapt, wait, circulate, remain, or move under ecological stress?
             </div>
 
         </div>
@@ -1737,12 +1877,12 @@ footer {
 
             <div class="concept">
                 <span>Mobility & Immobility</span>
-                <span>Household strategies</span>
+                <span>Household Strategies</span>
             </div>
 
             <div class="concept">
                 <span>Threshold Zones</span>
-                <span>Temporal governance</span>
+                <span>Temporal Governance</span>
             </div>
 
             <div class="concept">
@@ -1757,7 +1897,7 @@ footer {
 
             <div class="concept">
                 <span>Anticipatory Governance</span>
-                <span>Before displacement</span>
+                <span>Before Displacement</span>
             </div>
 
         </div>
@@ -1781,7 +1921,6 @@ footer {
         Featured Research
     </div>
 
-
     <div class="feature-grid">
 
         <div>
@@ -1793,32 +1932,25 @@ footer {
 
             <p class="feature-description">
 
-                <em>How Intermediaries Shape Mobility and Displacement
-                Across Ecological Gradients</em> asks what becomes visible
-                when migration research shifts attention from arrival to
-                the period in which households are already adapting,
-                preparing, circulating, waiting or becoming unable to move.
+                <em>
+                    How Intermediaries Shape Mobility and Displacement
+                    Across Ecological Gradients
+                </em>
+
+                asks what becomes visible when migration research shifts
+                attention from arrival to the period in which households are
+                already adapting, preparing, circulating, waiting or becoming
+                unable to move.
 
             </p>
 
 
             <div class="feature-meta">
 
-                <div class="meta-pill">
-                    Working Paper · 2026
-                </div>
-
-                <div class="meta-pill">
-                    RC21 Vienna
-                </div>
-
-                <div class="meta-pill">
-                    Urban Theory
-                </div>
-
-                <div class="meta-pill">
-                    Climate Mobility
-                </div>
+                <div class="meta-pill">Working Paper · 2026</div>
+                <div class="meta-pill">RC21 Vienna</div>
+                <div class="meta-pill">Urban Theory</div>
+                <div class="meta-pill">Climate Mobility</div>
 
             </div>
 
@@ -1878,149 +2010,591 @@ footer {
 
 
 <!-- =========================================================
-     QUANTITATIVE RESEARCH
+     AFRICAN CITIES
      ========================================================= -->
 
-<section class="quantitative">
+<section class="quantitative" id="african-cities">
 
 <div class="container">
 
     <div class="section-label">
-        Quantitative Research
+        Quantitative Research · Four African Cities
     </div>
 
-    <h2>
-        Migration, deprivation and urban inequality.
-    </h2>
 
-    <p class="section-intro">
-        A parallel strand of my work uses survey data, statistical modeling,
-        multidimensional indices and research-data pipelines to examine
-        migration and inequality across cities and countries.
-    </p>
+    <!-- INTRODUCTION -->
 
+    <div class="africa-intro">
 
-    <div class="quant-grid">
+        <div>
 
+            <h2>
+                Migration, residence and infrastructure deprivation
+                across four African cities.
+            </h2>
 
-        <div class="quant-card accent">
+            <p class="section-intro">
 
-            <div class="quant-kicker">
-                Four African Cities
-            </div>
+                This project examines how migration histories,
+                length of residence, household characteristics and urban
+                context intersect with infrastructure deprivation in
+                low-income settlements across Accra, Dar es Salaam,
+                Freetown and Monrovia.
 
-            <h3>
-                Infrastructure deprivation in low-income urban settlements
-            </h3>
-
-            <p>
-                Analysis of migration status, mobility biography and
-                infrastructure deprivation using a harmonized household
-                survey across four African cities.
             </p>
 
 
-            <div class="city-list">
+            <div class="africa-methods">
 
-                <span class="city">Accra</span>
-                <span class="city">Dar es Salaam</span>
-                <span class="city">Freetown</span>
-                <span class="city">Monrovia</span>
+                <span>Household Survey</span>
+                <span>n = 4,278</span>
+                <span>Deprivation Index</span>
+                <span>Probit Models</span>
+                <span>Comparative Urban Analysis</span>
 
             </div>
 
+        </div>
 
-            <div class="metric-row">
 
-                <div class="metric">
-                    <strong>4,278</strong>
-                    <span>Respondents</span>
+        <figure class="africa-map">
+
+            <a
+                href="assets/images/africa-map.png"
+                target="_blank"
+                rel="noopener"
+            >
+
+                <img
+                    src="assets/images/africa-map.png"
+                    alt="Map showing Accra, Dar es Salaam, Freetown and Monrovia"
+                    loading="lazy"
+                >
+
+            </a>
+
+            <figcaption>
+                Study locations: Accra, Dar es Salaam,
+                Freetown and Monrovia.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+
+    <!-- NUMBERS -->
+
+    <div class="africa-stats">
+
+        <div class="africa-stat">
+            <strong>4,278</strong>
+            <span>Respondents</span>
+        </div>
+
+        <div class="africa-stat">
+            <strong>4</strong>
+            <span>Cities</span>
+        </div>
+
+        <div class="africa-stat">
+            <strong>63%</strong>
+            <span>Women Respondents</span>
+        </div>
+
+        <div class="africa-stat">
+            <strong>40</strong>
+            <span>Mean Age</span>
+        </div>
+
+    </div>
+
+
+    <!-- 01 SURVEY -->
+
+    <div class="research-visual">
+
+        <div class="visual-copy">
+
+            <div class="visual-number">
+                01
+            </div>
+
+            <div class="visual-kicker">
+                The Survey
+            </div>
+
+            <h3>
+                A comparative household survey across four urban contexts.
+            </h3>
+
+            <p>
+                The harmonized dataset contains 4,278 respondents:
+                1,304 in Dar es Salaam, 1,210 in Accra,
+                1,125 in Monrovia and 639 in Freetown.
+            </p>
+
+            <p>
+                The survey captures variation in housing tenure,
+                neighbourhood residence and household characteristics,
+                allowing the analysis to ask whether becoming more established
+                in a neighbourhood translates into greater infrastructure security.
+            </p>
+
+        </div>
+
+
+        <figure>
+
+            <a
+                href="assets/images/africa-sample.jpg"
+                target="_blank"
+                rel="noopener"
+            >
+
+                <img
+                    src="assets/images/africa-sample.jpg"
+                    alt="Survey sample profile across the four African cities"
+                    loading="lazy"
+                >
+
+            </a>
+
+            <figcaption>
+                Sample composition, housing tenure and length of residence.
+                Click to enlarge.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+
+    <!-- 02 DEPRIVATION -->
+
+    <div class="research-visual reverse">
+
+        <div class="visual-copy">
+
+            <div class="visual-number">
+                02
+            </div>
+
+            <div class="visual-kicker">
+                Measuring Deprivation
+            </div>
+
+            <h3>
+                Infrastructure precarity is multidimensional.
+            </h3>
+
+            <p>
+                Household deprivation is constructed from multiple dimensions
+                of everyday infrastructure and housing conditions rather
+                than from a single service indicator.
+            </p>
+
+            <p>
+                Water and sanitation access, cooking fuel, housing materials
+                and tenure conditions reveal substantial variation in the
+                material circumstances experienced by households.
+            </p>
+
+        </div>
+
+
+        <figure>
+
+            <a
+                href="assets/images/africa-deprivation.jpg"
+                target="_blank"
+                rel="noopener"
+            >
+
+                <img
+                    src="assets/images/africa-deprivation.jpg"
+                    alt="Household deprivation scoring components"
+                    loading="lazy"
+                >
+
+            </a>
+
+            <figcaption>
+                Components used to characterize household infrastructure
+                deprivation. Click to enlarge.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+
+    <!-- FINDINGS -->
+
+    <div class="findings-heading">
+
+        <div class="section-label">
+            What the analysis shows
+        </div>
+
+        <h3>
+            Time in place matters,
+            but urban context matters enormously.
+        </h3>
+
+        <p>
+            The models point away from a simple migrant-versus-resident
+            explanation of deprivation. Household resources and duration
+            of residence matter, but substantial differences between cities
+            remain.
+        </p>
+
+    </div>
+
+
+    <div class="finding-grid">
+
+
+        <article class="finding-card">
+
+            <div class="finding-number">
+                01
+            </div>
+
+            <h4>
+                Longer residence is associated with lower deprivation.
+            </h4>
+
+            <p>
+                Households that have lived longer in their neighbourhood
+                tend to show a lower predicted probability of high
+                infrastructure deprivation.
+            </p>
+
+        </article>
+
+
+        <article class="finding-card">
+
+            <div class="finding-number">
+                02
+            </div>
+
+            <h4>
+                Education is associated with greater infrastructure security.
+            </h4>
+
+            <p>
+                Higher educational attainment is associated with lower
+                deprivation, while limited schooling is associated with
+                greater deprivation relative to the secondary-school baseline.
+            </p>
+
+        </article>
+
+
+        <article class="finding-card">
+
+            <div class="finding-number">
+                03
+            </div>
+
+            <h4>
+                City differences remain striking.
+            </h4>
+
+            <p>
+                Relative to Accra in the displayed model, deprivation is
+                substantially higher in Freetown and Monrovia and lower in
+                Dar es Salaam, suggesting strong contextual differences
+                between urban systems.
+            </p>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- 03 PROBIT -->
+
+    <div class="model-section">
+
+        <div class="model-copy">
+
+            <div class="visual-number">
+                03
+            </div>
+
+            <div class="visual-kicker">
+                Modeling Deprivation
+            </div>
+
+            <h3>
+                Who is more or less likely to experience deprivation?
+            </h3>
+
+            <p>
+                The displayed probit model compares individual characteristics,
+                education, neighbourhood residence and city location.
+            </p>
+
+            <p>
+                Longer residence and higher education are associated with
+                lower deprivation, while city-level differences remain large.
+                Infrastructure precarity therefore cannot be understood
+                through household characteristics alone.
+            </p>
+
+        </div>
+
+
+        <figure class="large-model-figure">
+
+            <a
+                href="assets/images/africa-probit.png"
+                target="_blank"
+                rel="noopener"
+            >
+
+                <img
+                    src="assets/images/africa-probit.png"
+                    alt="Probit estimates of household deprivation"
+                    loading="lazy"
+                >
+
+            </a>
+
+            <figcaption>
+                Probit estimates for household deprivation.
+                Negative values indicate lower predicted deprivation;
+                positive values indicate greater predicted deprivation.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+
+    <!-- 04 TIME IN PLACE -->
+
+    <div class="tenure-feature">
+
+        <div class="tenure-copy">
+
+            <div class="visual-number">
+                04
+            </div>
+
+            <div class="visual-kicker">
+                Time in Place
+            </div>
+
+            <h3>
+                Does staying longer reduce deprivation?
+            </h3>
+
+            <p>
+                Predicted deprivation declines with neighbourhood residence
+                in all four cities.
+            </p>
+
+            <p>
+                But the trajectories remain substantially separated.
+                Even among long-term residents, predicted deprivation remains
+                much higher in Freetown and Monrovia than in Dar es Salaam,
+                with Accra occupying an intermediate position.
+            </p>
+
+            <div class="tenure-highlight">
+
+                Longer residence appears protective —
+                but it does not erase structural differences between cities.
+
+            </div>
+
+        </div>
+
+
+        <figure>
+
+            <a
+                href="assets/images/africa-tenure.png"
+                target="_blank"
+                rel="noopener"
+            >
+
+                <img
+                    src="assets/images/africa-tenure.png"
+                    alt="Predicted probability of deprivation by city and neighbourhood length of stay"
+                    loading="lazy"
+                >
+
+            </a>
+
+            <figcaption>
+                Predicted probability of high deprivation by
+                neighbourhood length of stay and city.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+
+    <!-- 05 ARCHETYPES -->
+
+    <div class="archetype-feature">
+
+        <div class="archetype-heading">
+
+            <div>
+
+                <div class="visual-number">
+                    05
                 </div>
 
-                <div class="metric">
-                    <strong>5</strong>
-                    <span>Deprivation dimensions</span>
+                <div class="visual-kicker">
+                    Household Archetypes
                 </div>
 
-                <div class="metric">
-                    <strong>4</strong>
-                    <span>Cities</span>
-                </div>
+                <h3>
+                    Vulnerability appears in different configurations.
+                </h3>
 
             </div>
 
-        </div>
-
-
-        <div class="quant-card">
-
-            <div class="quant-kicker">
-                Modeling
-            </div>
-
-            <h3>
-                From deprivation indices to migration models
-            </h3>
 
             <p>
-                My quantitative work includes multidimensional deprivation
-                measurement, binary and ordered models, selection correction,
-                instrumental-variable strategies and interaction modeling.
-            </p>
-
-
-            <div class="method-chips">
-
-                <span class="method-chip">Probit</span>
-                <span class="method-chip">Instrumental Variables</span>
-                <span class="method-chip">Heckman</span>
-                <span class="method-chip">OLS</span>
-                <span class="method-chip">Composite Indices</span>
-                <span class="method-chip">Survey Analysis</span>
-
-            </div>
-
-        </div>
-
-
-        <div class="quant-card">
-
-            <div class="quant-kicker">
-                Research Mapping
-            </div>
-
-            <h3>
-                Mapping global migration expertise
-            </h3>
-
-            <p>
-                An R-based pipeline using OpenAlex and Scopus to retrieve
-                more than 10,000 migration papers, identify authors,
-                score relevance, calculate research metrics and map
-                institutional expertise.
+                A descriptive k-means analysis combines hazard,
+                deprivation and tenure indicators to identify four household
+                configurations. The archetypes show that vulnerability can
+                emerge through different combinations of infrastructure access,
+                tenure position and environmental exposure.
             </p>
 
         </div>
 
 
-        <div class="quant-card">
+        <figure class="archetype-figure">
 
-            <div class="quant-kicker">
-                Cities & Climate Capacity
-            </div>
+            <a
+                href="assets/images/africa-archetypes.png"
+                target="_blank"
+                rel="noopener"
+            >
 
-            <h3>
-                Subnational finance, adaptation and urban fragility
-            </h3>
+                <img
+                    src="assets/images/africa-archetypes.png"
+                    alt="Four household vulnerability archetypes across Accra, Dar es Salaam, Freetown and Monrovia"
+                    loading="lazy"
+                >
 
-            <p>
-                Comparative analysis connecting fiscal capacity,
-                subnational revenue and investment to the resources
-                available for local climate adaptation and urban response.
-            </p>
+            </a>
+
+            <figcaption>
+                Four descriptive archetypes derived through k-means clustering
+                across hazard, deprivation and tenure variables.
+                Click to enlarge.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="archetype-grid">
+
+
+            <article class="archetype-card">
+
+                <span>01</span>
+
+                <h4>
+                    Established resilient households
+                </h4>
+
+                <p>
+                    This cluster shows the lowest mean deprivation of the
+                    four archetypes despite meaningful environmental exposure.
+                    Dar es Salaam households form the largest share.
+                </p>
+
+            </article>
+
+
+            <article class="archetype-card">
+
+                <span>02</span>
+
+                <h4>
+                    Flood & sanitation-stressed owners
+                </h4>
+
+                <p>
+                    Ownership does not necessarily imply infrastructure
+                    security. This configuration combines flooding and water
+                    pressures with especially severe sanitation deprivation.
+                </p>
+
+            </article>
+
+
+            <article class="archetype-card">
+
+                <span>03</span>
+
+                <h4>
+                    Available services, but still under climate risk
+                </h4>
+
+                <p>
+                    Comparatively stronger service access can coexist with
+                    environmental vulnerability. This profile is renter-heavy
+                    and strongly represented by Dar es Salaam households.
+                </p>
+
+            </article>
+
+
+            <article class="archetype-card emphasis">
+
+                <span>04</span>
+
+                <h4>
+                    Highly deprived renters in compounded risk
+                </h4>
+
+                <p>
+                    The highest-deprivation configuration combines rental
+                    tenure with severe service deficits and multiple hazards.
+                    Accra and Freetown contribute heavily to this profile.
+                </p>
+
+            </article>
+
 
         </div>
 
+    </div>
+
+
+    <!-- TAKEAWAY -->
+
+    <div class="africa-takeaway">
+
+        <div class="takeaway-label">
+            Research takeaway
+        </div>
+
+        <p>
+
+            Urban deprivation cannot be reduced to migration status or
+            length of residence alone. Longer residence is associated with
+            improved infrastructure security, but substantial differences
+            between cities persist. Vulnerability is also configurational:
+            tenure, services and environmental exposure combine differently
+            across urban contexts.
+
+        </p>
 
     </div>
 
@@ -2031,10 +2605,6 @@ footer {
 
 <!-- =========================================================
      RC21 VIENNA
-     Upload photos later as:
-     assets/images/rc21-01.jpg
-     assets/images/rc21-02.jpg
-     assets/images/rc21-03.jpg
      ========================================================= -->
 
 <section class="rc21" id="rc21">
@@ -2047,7 +2617,7 @@ footer {
         <div class="rc21-copy">
 
             <div class="section-label">
-                From the conference
+                From the Conference
             </div>
 
             <h2>
@@ -2056,8 +2626,11 @@ footer {
             </h2>
 
             <p>
-                I presented <em>Anticipatory Urbanism: How Intermediaries
-                Shape Mobility and Displacement Across Ecological Gradients</em>
+                I presented
+                <em>
+                    Anticipatory Urbanism: How Intermediaries Shape Mobility
+                    and Displacement Across Ecological Gradients
+                </em>
                 at the RC21 Conference on inequalities and the city.
             </p>
 
@@ -2067,14 +2640,13 @@ footer {
                 to institutions, adaptation and urban policy.
             </p>
 
-
             <a
                 class="button light"
                 href="https://dx.doi.org/10.2139/ssrn.7024980"
                 target="_blank"
                 rel="noopener"
             >
-                Read the paper →
+                Read the Paper →
             </a>
 
         </div>
@@ -2082,22 +2654,12 @@ footer {
 
         <div class="photo-collage">
 
-
             <div class="photo-slot large">
 
                 <img
                     src="assets/images/rc21-01.jpg"
-                    alt="RC21 Vienna 2026"
-                    onerror="
-                        this.style.display='none';
-                        this.parentElement.classList.add('missing');
-                    "
+                    alt="Aratrika Debnath presenting at RC21 Vienna"
                 >
-
-                <span>
-                    RC21<br>
-                    Vienna 2026
-                </span>
 
             </div>
 
@@ -2106,17 +2668,8 @@ footer {
 
                 <img
                     src="assets/images/rc21-02.jpg"
-                    alt="RC21 conference presentation"
-                    onerror="
-                        this.style.display='none';
-                        this.parentElement.classList.add('missing');
-                    "
+                    alt="RC21 Vienna conference presentation"
                 >
-
-                <span>
-                    Anticipatory<br>
-                    Urbanism
-                </span>
 
             </div>
 
@@ -2125,19 +2678,10 @@ footer {
 
                 <img
                     src="assets/images/rc21-03.jpg"
-                    alt="RC21 Vienna conference"
-                    onerror="
-                        this.style.display='none';
-                        this.parentElement.classList.add('missing');
-                    "
+                    alt="RC21 Conference in Vienna"
                 >
 
-                <span>
-                    Research · Policy · Cities
-                </span>
-
             </div>
-
 
         </div>
 
@@ -2260,8 +2804,8 @@ footer {
             </h3>
 
             <p>
-                Special contribution to the GOLD VII report on
-                local democracy, decentralization and economies of care.
+                Special contribution to GOLD VII on local democracy,
+                decentralization and economies of care.
             </p>
 
             <div class="pub-links">
@@ -2372,8 +2916,8 @@ footer {
             </h3>
 
             <p>
-                Feminist storytelling, emotional infrastructure
-                and everyday humanitarianism in the Sundarbans.
+                Feminist storytelling, emotional infrastructure and
+                everyday humanitarianism in the Sundarbans.
             </p>
 
             <a
@@ -2381,7 +2925,7 @@ footer {
                 target="_blank"
                 rel="noopener"
             >
-                Read essay →
+                Read Essay →
             </a>
 
         </article>
@@ -2402,7 +2946,7 @@ footer {
                 target="_blank"
                 rel="noopener"
             >
-                Read essay →
+                Read Essay →
             </a>
 
         </article>
@@ -2424,7 +2968,7 @@ footer {
                 target="_blank"
                 rel="noopener"
             >
-                Read essay →
+                Read Essay →
             </a>
 
         </article>
@@ -2447,7 +2991,7 @@ footer {
                 target="_blank"
                 rel="noopener"
             >
-                Read essay →
+                Read Essay →
             </a>
 
         </article>
@@ -2537,7 +3081,7 @@ footer {
 
 
 <!-- =========================================================
-     TALKS + CONFERENCES
+     TALKS
      ========================================================= -->
 
 <section class="talks" id="talks">
@@ -2708,7 +3252,7 @@ footer {
 
             <p>
                 Quantitative migration research, infrastructure deprivation,
-                African cities datasets and global migration expertise mapping.
+                African Cities datasets and global migration expertise mapping.
             </p>
 
         </div>
@@ -2856,9 +3400,8 @@ footer {
             </h3>
 
             <p>
-                R · Python · OpenAlex · Scopus ·
-                research database design · literature mapping ·
-                NLP-assisted policy analysis · dashboards
+                R · Python · OpenAlex · Scopus · research database design ·
+                literature mapping · NLP-assisted policy analysis · dashboards
             </p>
 
         </div>
@@ -2871,9 +3414,9 @@ footer {
             </h3>
 
             <p>
-                QGIS · Sentinel-2 · NDWI ·
-                settlement-growth analysis · exposure mapping ·
-                infrastructure vulnerability · climate-risk mapping
+                QGIS · Sentinel-2 · NDWI · settlement-growth analysis ·
+                exposure mapping · infrastructure vulnerability ·
+                climate-risk mapping
             </p>
 
         </div>
@@ -2940,21 +3483,6 @@ footer {
         >
             LinkedIn →
         </a>
-
-        <!--
-        AFTER YOU UPLOAD YOUR CV PDF TO:
-        assets/Aratrika-Debnath-CV.pdf
-
-        remove the comment marks around this button:
-
-        <a
-            class="button"
-            href="assets/Aratrika-Debnath-CV.pdf"
-            target="_blank"
-        >
-            Download CV →
-        </a>
-        -->
 
     </div>
 
