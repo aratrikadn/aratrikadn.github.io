@@ -72,11 +72,57 @@ nav a:hover {
     min-height: 82vh;
     display: flex;
     align-items: center;
-    padding: 90px 8%;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 80px 8%;
 }
 
 .hero-content {
-    max-width: 900px;
+    flex: 1 1 56%;
+    max-width: 760px;
+}
+
+.hero-portrait {
+    flex: 1 1 38%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.portrait-frame {
+    position: relative;
+    width: min(410px, 100%);
+}
+
+.portrait-frame::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #b45f43;
+    top: 18px;
+    left: 18px;
+    z-index: 0;
+}
+
+.portrait-frame img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.portrait-caption {
+    position: relative;
+    z-index: 2;
+    margin-top: 18px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7b6d65;
 }
 
 .eyebrow {
@@ -285,6 +331,23 @@ footer {
 
     .hero {
         min-height: 75vh;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .hero-portrait {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .portrait-frame {
+        width: min(360px, 90%);
+    }
+
+    .portrait-frame img {
+        height: auto;
+        aspect-ratio: 4 / 5;
     }
 
     section {
@@ -335,6 +398,16 @@ that shape how people adapt, stay and move.
 <div class="tag">Governance</div>
 </div>
 
+</div>
+
+<div class="hero-portrait">
+    <div class="portrait-frame">
+        <img src="assets/images/aratrika.d_08.png"
+             alt="Portrait of Aratrika Debnath">
+        <div class="portrait-caption">
+            Researcher · New York
+        </div>
+    </div>
 </div>
 
 </header>
