@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aratrika Debnath | Climate Mobility & Urban Policy</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #20272a;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(209,117,83,.10), transparent 28%),
+        radial-gradient(circle at 90% 10%, rgba(42,110,107,.10), transparent 30%),
+        #f5f1e8;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+nav {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(30,40,40,.12);
+    background: rgba(245,241,232,.92);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+nav a {
+    color: #263334;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b45f43;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    color: #b45f43;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: .95;
+    font-weight: normal;
+    color: #203033;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 34px);
+    max-width: 800px;
+    color: #516062;
+    line-height: 1.35;
+}
+
+.hero-tags {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    border: 1px solid #7d8f89;
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 13px;
+    background: rgba(255,255,255,.35);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 100px 8%;
+}
+
+.section-label {
+    color: #b45f43;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: normal;
+    margin-bottom: 35px;
+    color: #203033;
+}
+
+/* ABOUT */
+
+.about {
+    background: #203033;
+    color: #f7f1e7;
+}
+
+.about h2 {
+    color: #f7f1e7;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 80px;
+}
+
+.about p {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    line-height: 1.8;
+    color: #e8e4dc;
+}
+
+.about-note {
+    border-left: 2px solid #d79a65;
+    padding-left: 28px;
+    font-size: 15px;
+    color: #cbd3d0;
+}
+
+/* RESEARCH */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    padding: 35px;
+    min-height: 280px;
+    border: 1px solid rgba(40,50,50,.16);
+    border-radius: 5px;
+    background: rgba(255,255,255,.40);
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,.75);
+}
+
+.card-number {
+    color: #b45f43;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #66706f;
+    font-size: 15px;
+}
+
+/* FEATURED */
+
+.featured {
+    background: #d7a064;
+}
+
+.featured h2 {
+    max-width: 750px;
+}
+
+.feature-box {
+    margin-top: 50px;
+    padding: 45px;
+    background: #f5f1e8;
+    max-width: 950px;
+}
+
+.feature-box h3 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    max-width: 750px;
+    color: #596261;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    padding: 120px 8%;
+}
+
+.contact h2 {
+    font-size: clamp(45px, 7vw, 80px);
+}
+
+.contact p {
+    max-width: 600px;
+    margin: auto;
+    color: #606b69;
+}
+
+footer {
+    border-top: 1px solid rgba(30,40,40,.15);
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #687371;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .about-grid,
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    section {
+        padding: 70px 7%;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<nav>
+
+<div class="logo">AD.</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#work">Selected Work</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Research · Policy · Cities
+</div>
+
+<h1>Aratrika<br>Debnath</h1>
+
+<div class="hero-text">
+Researching climate mobility, livelihoods and the institutions
+that shape how people adapt, stay and move.
+</div>
+
+<div class="hero-tags">
+<div class="tag">Climate Mobility</div>
+<div class="tag">Urban Policy</div>
+<div class="tag">Migration</div>
+<div class="tag">Livelihoods</div>
+<div class="tag">Governance</div>
+</div>
+
+</div>
+
+</header>
+
+
+<section class="about" id="about">
+
+<div class="section-label">01 — About</div>
+
+<h2>Research at the intersection of people, place and policy.</h2>
+
+<div class="about-grid">
+
+<p>
+I am a researcher working across climate mobility, migration,
+urban policy and livelihoods. My work asks how environmental
+change becomes translated into household decisions to stay,
+adapt, circulate or migrate — and how institutions shape those
+possibilities before displacement becomes visible.
+</p>
+
+<div class="about-note">
+This website brings together my research, publications,
+fieldwork, teaching and ongoing projects.
+</div>
+
+</div>
+
+</section>
+
+
+<section id="research">
+
+<div class="section-label">02 — Research</div>
+
+<h2>What I work on</h2>
+
+<div class="research-grid">
+
+<div class="card">
+<div class="card-number">01</div>
+<h3>Climate Mobility</h3>
+<p>
+Understanding mobility and immobility under slow-onset
+environmental change.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">02</div>
+<h3>Institutions & Livelihoods</h3>
+<p>
+Examining how collective and meso-level institutions shape
+household strategies and adaptive capacity.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">03</div>
+<h3>Urban Futures</h3>
+<p>
+Exploring how migration, displacement and adaptation become
+connected to cities before migrants physically arrive.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="featured" id="work">
+
+<div class="section-label">03 — Selected Work</div>
+
+<h2>Research, writing and ongoing projects.</h2>
+
+<div class="feature-box">
+
+<h3>Anticipatory Urbanism</h3>
+
+<p>
+How intermediaries shape mobility and displacement across
+ecological gradients — and what becomes visible when migration
+is studied before arrival rather than only after movement occurs.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<div class="section-label">04 — Connect</div>
+
+<h2>Let's stay in conversation.</h2>
+
+<p>
+For research collaborations, academic conversations,
+policy work and speaking opportunities.
+</p>
+
+</section>
+
+
+<footer>
+
+<div>© 2026 Aratrika Debnath</div>
+
+<div>New York · India · Beyond</div>
+
+</footer>
+
+</body>
+</html>
