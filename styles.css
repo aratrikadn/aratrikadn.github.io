@@ -971,3 +971,498 @@ footer{padding:26px 7%;display:flex;justify-content:space-between;gap:20px;borde
     display:none;
   }
 }
+
+
+/* =========================================================
+   METHODS — LAYOUT CORRECTION
+   larger visuals, no overlaps, captions below images
+   ========================================================= */
+
+
+/* ---------- PAGE WIDTH ---------- */
+
+.methods-page .methods-shell{
+  width:min(1320px, calc(100% - 90px));
+  margin:0 auto;
+}
+
+
+/* ---------- INTRO ---------- */
+
+.methods-page .methods-intro{
+  padding:88px 0 74px;
+}
+
+.methods-page .methods-intro h1{
+  max-width:760px;
+  font-size:clamp(64px, 6.5vw, 98px);
+  line-height:.92;
+  letter-spacing:-2px;
+}
+
+.methods-page .methods-lede{
+  max-width:650px;
+  margin-top:25px;
+  font-size:16px;
+  line-height:1.7;
+}
+
+
+/* ---------- METHOD SECTIONS ---------- */
+
+.methods-page .method-story{
+  padding:96px 0;
+}
+
+.methods-page .method-story-grid{
+  display:grid;
+  grid-template-columns:minmax(280px,.72fr) minmax(0,1.75fr);
+  gap:68px;
+  align-items:center;
+}
+
+
+/* retain alternation */
+
+.methods-page .method-story-reverse .method-copy{
+  order:2;
+}
+
+.methods-page .method-story-reverse .method-gallery{
+  order:1;
+}
+
+
+/* remove previous artificial vertical shifts */
+
+.methods-page .qualitative-method .method-copy,
+.methods-page .participatory-method .method-copy,
+.methods-page .quantitative-method .method-copy,
+.methods-page .gis-method .method-copy{
+  transform:none;
+}
+
+
+/* ---------- METHOD TEXT ---------- */
+
+.methods-page .method-copy h2{
+  font-size:clamp(47px,4.6vw,69px);
+  line-height:.98;
+}
+
+.methods-page .method-copy > p:not(.method-tags){
+  max-width:420px;
+  font-size:14px;
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   IMAGE CARDS
+   no text over images
+   ========================================================= */
+
+.methods-page .method-visual{
+  position:relative;
+  display:block;
+
+  overflow:visible;
+  background:transparent;
+
+  box-shadow:none;
+
+  text-decoration:none;
+
+  transition:
+    transform .32s ease;
+}
+
+
+/* REMOVE OLD IMAGE OVERLAY */
+
+.methods-page .method-visual::after{
+  display:none !important;
+}
+
+
+/* actual picture */
+
+.methods-page .method-visual img{
+  width:100%;
+  height:auto;
+
+  display:block;
+
+  background:#f6f2e9;
+
+  object-fit:contain;
+
+  box-shadow:
+    0 16px 35px rgba(4,20,16,.17);
+
+  transition:
+    transform .38s ease,
+    box-shadow .38s ease;
+}
+
+
+/* hover */
+
+.methods-page .method-visual:hover{
+  transform:translateY(-6px);
+  z-index:10;
+}
+
+.methods-page .method-visual:hover img{
+  transform:scale(1.025);
+
+  box-shadow:
+    0 25px 50px rgba(3,17,13,.27);
+}
+
+
+/* =========================================================
+   CAPTIONS NOW LIVE UNDER THE IMAGE
+   ========================================================= */
+
+.methods-page .visual-caption,
+.methods-page .visual-contain .visual-caption{
+  position:static;
+
+  display:block;
+
+  max-width:none;
+
+  margin:10px 0 0;
+  padding:0 2px;
+
+  background:transparent;
+
+  color:#f7f2e8;
+}
+
+.methods-page .visual-caption strong{
+  display:block;
+
+  margin-bottom:3px;
+
+  color:#e1a83d;
+
+  font-size:9px;
+  line-height:1.4;
+
+  letter-spacing:1.15px;
+  text-transform:uppercase;
+}
+
+.methods-page .visual-caption span{
+  display:block;
+
+  max-width:500px;
+
+  color:#9fb3ad;
+
+  font-size:10px;
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   QUALITATIVE
+   primary wide image + two clearly readable supports
+   ========================================================= */
+
+.methods-page .qualitative-gallery{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+
+.methods-page .qualitative-primary{
+  width:100%;
+  aspect-ratio:auto;
+}
+
+.methods-page .qualitative-primary img{
+  width:100%;
+  aspect-ratio:16 / 8.7;
+  object-fit:contain;
+}
+
+.methods-page .qualitative-support{
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:20px;
+  align-items:start;
+}
+
+.methods-page .qualitative-telesketch,
+.methods-page .qualitative-narrative{
+  width:100%;
+  transform:none;
+  aspect-ratio:auto;
+}
+
+.methods-page .qualitative-telesketch img{
+  width:100%;
+  aspect-ratio:auto;
+}
+
+.methods-page .qualitative-narrative img{
+  width:100%;
+  aspect-ratio:auto;
+}
+
+
+/* =========================================================
+   PARTICIPATORY
+   two large photographs — no floating thumbnails
+   ========================================================= */
+
+.methods-page .participatory-gallery{
+  min-height:0;
+
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:22px;
+
+  align-items:start;
+}
+
+.methods-page .participatory-main,
+.methods-page .participatory-secondary{
+  position:relative;
+
+  width:100%;
+  aspect-ratio:auto;
+
+  right:auto;
+  bottom:auto;
+
+  border:0;
+}
+
+.methods-page .participatory-main img,
+.methods-page .participatory-secondary img{
+  width:100%;
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+}
+
+
+/* a small offset without overlapping */
+
+.methods-page .participatory-secondary{
+  margin-top:54px;
+}
+
+
+/* =========================================================
+   QUANTITATIVE
+   large primary plot + readable secondary
+   ========================================================= */
+
+.methods-page .quantitative-gallery{
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:22px;
+
+  align-items:start;
+}
+
+.methods-page .quantitative-primary,
+.methods-page .quantitative-secondary{
+  width:100%;
+  aspect-ratio:auto;
+  transform:none;
+}
+
+.methods-page .quantitative-primary img{
+  width:100%;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
+
+.methods-page .quantitative-secondary{
+  margin-top:48px;
+}
+
+.methods-page .quantitative-secondary img{
+  width:100%;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   GIS
+   two substantial maps rather than floating thumbnails
+   ========================================================= */
+
+.methods-page .gis-gallery{
+  min-height:0;
+
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:22px;
+
+  align-items:start;
+}
+
+.methods-page .gis-primary,
+.methods-page .gis-secondary{
+  position:relative;
+
+  width:100%;
+  aspect-ratio:auto;
+
+  left:auto;
+  right:auto;
+  bottom:auto;
+
+  margin:0;
+  border:0;
+}
+
+.methods-page .gis-primary img,
+.methods-page .gis-secondary img{
+  width:100%;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
+
+.methods-page .gis-secondary{
+  margin-top:54px;
+}
+
+
+/* =========================================================
+   REMOVE PREVIOUS DECORATIVE FLOATING ELEMENTS
+   ========================================================= */
+
+.methods-page .qualitative-method::before,
+.methods-page .quantitative-method::before,
+.methods-page .participatory-method::after,
+.methods-page .gis-method::after{
+  display:none !important;
+}
+
+
+/* =========================================================
+   GET IN TOUCH
+   retain site's contact functionality but keep it restrained
+   ========================================================= */
+
+.methods-contact{
+  background:#e0aa3e;
+  padding:56px 0 60px;
+}
+
+.methods-contact .section-label{
+  margin-bottom:20px;
+}
+
+.methods-contact .contact-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.methods-contact .button{
+  background:transparent;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.methods-footer{
+  background:#112f2a;
+
+  border-top:1px solid rgba(247,242,232,.1);
+
+  color:#8da29c;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width:1050px){
+
+  .methods-page .methods-shell{
+    width:min(920px, calc(100% - 44px));
+  }
+
+  .methods-page .method-story-grid{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .methods-page .method-story-reverse .method-copy,
+  .methods-page .method-story-reverse .method-gallery{
+    order:initial;
+  }
+
+  .methods-page .method-copy{
+    max-width:650px;
+  }
+
+  .methods-page .method-copy > p:not(.method-tags){
+    max-width:620px;
+  }
+
+  .methods-page .participatory-gallery,
+  .methods-page .quantitative-gallery,
+  .methods-page .gis-gallery{
+    max-width:850px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:680px){
+
+  .methods-page .methods-shell{
+    width:calc(100% - 30px);
+  }
+
+  .methods-page .methods-intro{
+    padding:58px 0 50px;
+  }
+
+  .methods-page .methods-intro h1{
+    font-size:52px;
+  }
+
+  .methods-page .method-story{
+    padding:62px 0;
+  }
+
+  .methods-page .qualitative-support,
+  .methods-page .participatory-gallery,
+  .methods-page .quantitative-gallery,
+  .methods-page .gis-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .methods-page .participatory-secondary,
+  .methods-page .quantitative-secondary,
+  .methods-page .gis-secondary{
+    margin-top:0;
+  }
+
+  .methods-page .method-visual:hover,
+  .methods-page .method-visual:hover img{
+    transform:none;
+  }
+
+  .methods-contact{
+    padding:44px 0 48px;
+  }
+}
